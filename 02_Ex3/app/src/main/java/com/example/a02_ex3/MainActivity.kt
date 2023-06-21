@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonF.setOnClickListener {
-            var celsius: Double = binding.editCelsius.text.toString().toDouble()
-            var resultado: Double = celsius * 1.8 + 32
+            val celsius: Double = binding.editCelsius.text.toString().toDouble()
+            val resultado: Double = celsius * 1.8 + 32
             binding.textResultado.text = "Temperatura em Fahrenheit: ${resultado}"
         }
     }
