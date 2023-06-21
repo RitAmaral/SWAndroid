@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
             if (nome.isEmpty()) {
                 binding.textResultado.text = "Nome não inserido"
             }
+            else if (apelido.isEmpty()) {
+                binding.textResultado.text = "Apelido não inserido"
+            }
             else {
                 binding.textResultado.text = "Olá ${nome} ${apelido}!"
             }

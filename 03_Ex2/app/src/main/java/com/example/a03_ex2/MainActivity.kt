@@ -19,10 +19,13 @@ class MainActivity : AppCompatActivity() {
             val apelido = binding.editApelido.text.toString()
 
             if (nome.isEmpty()) {
-                Toast.makeText(applicationContext, "nome não inserido", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Nome não inserido", Toast.LENGTH_SHORT).show()
+            }
+            else if (apelido.isEmpty()) {
+                Toast.makeText(applicationContext, "Apelido não inserido", Toast.LENGTH_SHORT).show()
             }
             else {
-                Toast.makeText(applicationContext, "Olá ${nome} ${apelido}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Olá ${nome} ${apelido}!", Toast.LENGTH_SHORT).show()
             }
 
         }
