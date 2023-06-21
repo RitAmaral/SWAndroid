@@ -25,6 +25,9 @@
       
 - [02 Ex1](02_Ex1) - Aula 21/06/2023 - Exercícios 1 e 2
 - [02 Ex3](02_Ex3) - Aula 21/06/2023 - Exercício 3
+    - Conversão de elementos:
+     
+      ![image](https://github.com/RitAmaral/SWAndroid/assets/132366922/d91de8cf-095d-4a2d-925f-51e49b244b55)
 
 
 
