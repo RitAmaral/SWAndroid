@@ -6,7 +6,7 @@ import com.example.a02_ex1.databinding.ActivityMainBinding
 import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
-    //Nota: exercício 1 e 2
+    //Nota: exercício 1 e 2 - Converter Euros para Dólares
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
