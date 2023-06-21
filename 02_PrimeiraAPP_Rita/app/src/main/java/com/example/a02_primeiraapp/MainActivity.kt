@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_main) //isto vai ser substituído por:
         setContentView(binding.root) //Agora já temos ligação entre os 2 lados (xml e kt)
 
+        /*
         binding.buttonOla.setOnClickListener {
             binding.editNome.setText("Olá") //ao clicar no botão aparece escrito: Olá
         }
@@ -24,6 +25,13 @@ class MainActivity : AppCompatActivity() {
         binding.textResultado.setOnClickListener {
             binding.editNome.setText("Adeus") //ao clicar no TextView, aparece escrito: Adeus
         }
+        */
 
+        binding.buttonOla.setOnClickListener {
+            val nome = binding.editNome.text.toString() //toString vai dizer que nome é uma string
+            binding.textResultado.text = "Olá ${nome}" // <- Interpolação, ou concatenação:
+            //binding.textResultado.setText("Olá" + nome) //posso usar text ou setText, é uma questão de perfomance
+            //se não estiver a atribuir um valor posso escrever: val nome : String
+        }
     }
 }
