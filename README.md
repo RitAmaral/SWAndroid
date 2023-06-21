@@ -23,8 +23,8 @@
       
       ![image](https://github.com/RitAmaral/SWAndroid/assets/132366922/c59708ce-3e4c-4737-a2d8-a9dd9f7092ad)
       
-- [02 Ex1](02_Ex1) - Aula 20 e 21/06/2023 - Exercícios 1 e 2
-- [02 Ex3](02_Ex3) - Aula 20 e 21/06/2023 - Exercício 3
+- [02 Ex1](02_Ex1) - Aula 21/06/2023 - Exercícios 1 e 2
+- [02 Ex3](02_Ex3) - Aula 21/06/2023 - Exercício 3
 
 
 
