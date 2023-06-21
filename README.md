@@ -22,7 +22,9 @@
     - `val nome = binding.editNome.text.toString()` -> é como se fosse Console.ReadLine e `binding.textResultado.setText("Olá ${nome}")` -> é como se fosse Console.WriteLine. val = constante, poupa memória em relação a var = variável. Também posso escrever, se não estiver a atribuir um valor: `val nome : String`. Mas este não é o caso, e é nulo. Outra forma, que representa 0 e não nulo: `val nome = ""`.
       
       ![image](https://github.com/RitAmaral/SWAndroid/assets/132366922/c59708ce-3e4c-4737-a2d8-a9dd9f7092ad)
-
+      
+- [02 Ex1](02_Ex1) - Aula 20 e 21/06/2023 - Exercícios 1 e 2
+- [02 Ex3](02_Ex3) - Aula 20 e 21/06/2023 - Exercício 3
 
 
 
