@@ -32,8 +32,8 @@
 - [03 Ex1](03_Ex1) - Aula 21/06/2023 - Exercício 1
 - [03 Ex2](03_Ex2) - Aula 21/06/2023 - Exercício 2 - igual ao exercício 1 mas com toast (pop-up) em vez de textview
 - [04 Ex1](04_Ex1) - Aula 22/06/2023 - Exercício 1
-- [04 Ex2](04_Ex3) - Aula 22/06/2023 - Exercício 2
-- [04 Ex3](04_Ex4) - Aula 22/06/2023 - Exercício 3
-- [04 Ex4](04_Ex5) - Aula 22/06/2023 - Exercício 4
+- [04 Ex2](04_Ex2) - Aula 22/06/2023 - Exercício 2
+- [04 Ex3](04_Ex3) - Aula 22/06/2023 - Exercício 3
+- [04 Ex4](04_Ex4) - Aula 22/06/2023 - Exercício 4
 
     
