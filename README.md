@@ -29,7 +29,10 @@
      
       ![image](https://github.com/RitAmaral/SWAndroid/assets/132366922/d91de8cf-095d-4a2d-925f-51e49b244b55)
 
-
+- [03 Ex1](03_Ex1) - Aula 21/06/2023 - Exercício 1
+- [03 Ex2](03_Ex2) - Aula 21/06/2023 - Exercício 2 - igual ao exercício 1 mas com toast (pop-up) em vez de textview
+- [04 Ex1](04_Ex1) - Aula 21/06/2023 - Exercício 1
+- [04 Ex1](04_Ex1) - Aula 21/06/2023 - Exercício 1
 
 
     
