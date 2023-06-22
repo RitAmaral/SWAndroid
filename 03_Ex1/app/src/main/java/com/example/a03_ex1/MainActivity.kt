@@ -6,6 +6,8 @@ import com.example.a03_ex1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    //03 - Exercício 1
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonOla.setOnClickListener {
-            val nome = binding.editNome.text.toString()
-            val apelido = binding.editApelido.text.toString()
+            val nome = binding.editNome.text.toString().trim() //trim limpa os espaços em branco antes e depois
+            val apelido = binding.editApelido.text.toString().trim()
 
             if (nome.isEmpty()) {
                 binding.textResultado.text = "Nome não inserido"
@@ -26,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             else {
                 binding.textResultado.text = "Olá ${nome} ${apelido}!"
             }
+            //ou
+            //if (nome.isEmpty() || apelido.isEmpty())
+            //ou também podemos usar: if (nome.isNullOrBlank()
+
 
         }
 

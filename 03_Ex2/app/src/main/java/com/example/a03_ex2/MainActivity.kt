@@ -7,6 +7,8 @@ import com.example.a03_ex2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    //03 - Exercício 2 - toast - substitui a necessidade de termos textview, é um pop-up
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             }
             else {
                 Toast.makeText(applicationContext, "Olá ${nome} ${apelido}!", Toast.LENGTH_SHORT).show()
-            }
+            } //applicationContext: quando é chamado, onde vai ser apresentado
 
         }
 
