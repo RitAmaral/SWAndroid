@@ -2,10 +2,24 @@ package com.example.a04_ex2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.a04_ex2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    //04 - Exercício 2
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.buttonConverter.setOnClickListener{
+            val euro: Double = binding.editValorEuros.text.toString().toDouble()
+            //2 formas de arredondamento:
+            //val resultado: Double = (euro * 1.09188 * 100).roundToInt().toDouble() / 100
+            val resultado: Double = String.format("%.2f", euro * 1.09188).toDouble()
+            binding.textValorDolares.text = "Valor em Dólares: ${resultado}$"
+        }
     }
 }

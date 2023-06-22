@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<!-- acrescentar o android:orientation = vertical ou horizontal-->
+    <TextView
+        android:id="@+id/text_valor_dolares"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B5D7F3"
+        android:gravity="center"
+        android:text="Conversor de Moeda"
+        android:textColor="#126115"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edit_valor_euros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B5D7F3"
+        android:gravity="center"
+        android:hint="Insira o valor em Euros"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B5D7F3"
+        android:gravity="center"
+        android:orientation="horizontal"> <!-- aqui só colocar > e não /> -->
+
+        <Button
+            android:id="@+id/button_real"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#126115"
+            android:text="Real" />
+
+        <Button
+            android:id="@+id/button_dolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5sp"
+            android:backgroundTint="#126115"
+            android:text="Dolar" />
+
+        <Button
+            android:id="@+id/button_peso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#126115"
+            android:text="Peso" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B5D7F3"
+        android:gravity="center"
+        android:text="Desenvolvido por: \nAna Rita Amaral"
+        android:textColor="#AD958F8F"
+        android:textSize="24sp" />
+
+</LinearLayout>
