@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:background="#FFEB3B"
         android:fontFamily="casual"
         android:gravity="center"
         android:text="Bem-vindo"
@@ -18,33 +19,49 @@
         android:textSize="50sp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:text="Preencha o seu username e password para continuar"
-        android:textSize="20sp"
-        android:gravity="center"/>
-
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:text="Preencha o seu username e password para continuar"
+        android:textColor="#6C6868"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:textColor="#6C6868" />
 
         <EditText
             android:id="@+id/edit_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="Username"
             android:minWidth="200dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password:"
+            android:textColor="#6C6868" />
 
         <EditText
             android:id="@+id/edit_pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="Password"
             android:inputType="textPassword"
             android:minWidth="200dp" />
     </LinearLayout>
@@ -56,5 +73,11 @@
         android:backgroundTint="#1A4CFF"
         android:padding="30dp"
         android:text="Entrar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
 </LinearLayout>

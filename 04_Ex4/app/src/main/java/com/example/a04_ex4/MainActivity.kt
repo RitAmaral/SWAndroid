@@ -16,15 +16,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonEntrar.setOnClickListener {
-            val user = binding.editUser.text.toString()
-            val pass = binding.editPass.text.toString()
+            val user = binding.editUser.text.toString().trim()
+            val pass = binding.editPass.text.toString().trim()
             if (user == "user" && pass == "password") {
                 Toast.makeText(applicationContext, "Login Válido", Toast.LENGTH_SHORT).show()
             }
             else {
                 Toast.makeText(applicationContext, "Login Inválido", Toast.LENGTH_SHORT).show()
-                val user = ""
-                val pass = ""
+                binding.editUser.text = null
+                binding.editPass.text = null
             }
 
         }
