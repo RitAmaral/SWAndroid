@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
 
         //também posso fazer isto:
         binding.buttonVoltar.setOnClickListener {
-            finish() 
+            finish()
         }
     }
 }

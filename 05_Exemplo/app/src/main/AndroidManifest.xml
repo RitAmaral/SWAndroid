@@ -13,17 +13,21 @@
         android:theme="@style/Theme.05_Exemplo"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
+            android:name=".SplashScreenActivity"
+            android:exported="true" > <!-- passar de false para true-->
+            <intent-filter> <!-- identifica a activity de arranque da aplicação-->
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/> <!-- qnd tiro o intent daqui, passa de true para false-->
+
     </application>
 
 </manifest>
