@@ -24,6 +24,7 @@
         android:background="#B5D7F3"
         android:gravity="center"
         android:hint="Insira o valor em Euros"
+        android:inputType="numberDecimal"
         android:padding="10dp"/>
 
     <LinearLayout
