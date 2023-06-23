@@ -35,5 +35,5 @@
 - [04 Ex2](04_Ex2) - Aula 22/06/2023 - Exercício 2
 - [04 Ex3](04_Ex3) - Aula 22/06/2023 - Exercício 3 - LinearLayout dentro de Linear Layout - ex de converter euros em dólares, reais e pesos.
 - [04 Ex4](04_Ex4) - Aula 22/06/2023 - Exercício 4 - LinearLayout dentro de Linear Layout - ex username e password válidos
-
+- [05 Exemplo](05_Exemplo) - Aula 23/06/2023 - Exemplos sobre criar **múltiplas activities**, *intent* que faz a ligação entre activities, *splashscreen*, *handler*, trocar launcher activity através do *manifest*.
     
