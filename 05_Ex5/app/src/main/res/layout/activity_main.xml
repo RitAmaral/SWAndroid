@@ -4,46 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#ADD7F8"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Insira um número de horas"
         android:layout_marginBottom="30dp"
-        android:textSize="30sp"/>
-    <EditText
-        android:id="@+id/edit_horas"
+        android:fontFamily="casual"
+        android:text="Insira um número de horas"
+        android:textColor="#F37171"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="horas"/>
+        android:background="#31BBFA"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+        <EditText
+            android:id="@+id/edit_horas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="horas"
+            android:inputType="number" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/button_horas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Confirmar horas"/>
+        android:backgroundTint="#F37171"
+        android:text="Confirmar horas" />
+
     <TextView
         android:id="@+id/text_semana"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Semana"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:text="Semana" />
+
     <TextView
         android:id="@+id/text_dias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dias"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:text="Dias" />
+
     <TextView
         android:id="@+id/text_horas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Horas"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:text="Horas" />
 
 
 </LinearLayout>

@@ -15,20 +15,22 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonNumber.setOnClickListener {
             val number: Int = binding.editNumber.text.toString().toInt()
-            val resultado: Int = number % 2
+            val resultado: Int = number % 2 //se ao dividir o number por 2 o res for 0, é par
             var Primo = true
 
+            //verifica se é par ou ímpar
             if(resultado == 0) {
                 binding.textPar.text = "O número é par"
             }
             else {
                 binding.textPar.text = "O número é ímpar"
             }
-            if (number <= 1) {
+            //verifica se é primo ou não
+            if (number <= 1) { //número primo tem de ser maior que 1
                 Primo = false
             } else {
                 for (i in 2 until number) {
-                    if (number % i == 0) {
+                    if (number % i == 0) { //número não é primo pq tem um divisor diferente de 1 de ele mesmo.
                         Primo = false
                         break
                     }
