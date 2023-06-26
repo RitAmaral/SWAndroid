@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 Primo = false
             } else {
                 for (i in 2 until number) {
-                    if (number % i == 0) { //número não é primo pq tem um divisor diferente de 1 de ele mesmo.
+                    if (number % i == 0) { //número não é primo pq tem um divisor diferente de 1 e de ele mesmo.
                         Primo = false
                         break
                     }
