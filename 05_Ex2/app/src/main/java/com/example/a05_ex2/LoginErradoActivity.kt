@@ -17,14 +17,7 @@ class LoginErradoActivity : AppCompatActivity() {
         binding = ActivityLoginErradoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        /*
-        Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }, 3000)
-        */
-
-        Toast.makeText(applicationContext, "Login Errado", Toast.LENGTH_SHORT)
+        Toast.makeText(applicationContext, "Login Errado", Toast.LENGTH_SHORT).show()
 
         binding.buttonVoltar.setOnClickListener {
             startActivity(Intent(this, ActivityMainBinding::class.java))
