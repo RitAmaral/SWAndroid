@@ -2,6 +2,7 @@
 
 ![image](https://github.com/RitAmaral/SWAndroid/assets/132366922/bf37c094-0400-4b53-bdd5-b99464870347)
 
+[Formador: Bruno Santos](https://github.com/brunofrs7/Android-Kotlin)
 
 ## Aulas e exercícios: Android - Kotlin
 
@@ -41,4 +42,4 @@
 - [05 Ex3](05_Ex3) - Aula 26/06/2023 - Exercício 3 - splashcreen (handler)
 - [05 Ex4](05_Ex4) - Aula 26/06/2023 - Exercício 4 - número par/ímpar e primo/não primo
 - [05 Ex5](05_Ex5) - Aula 26/06/2023 - Exercício 5 - converter horas em semanas, dias e horas
-    
+
