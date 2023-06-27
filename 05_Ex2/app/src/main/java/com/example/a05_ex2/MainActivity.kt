@@ -15,14 +15,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonEntrar.setOnClickListener {
-            val user = binding.editUser.text.toString().trim()
+            val username = binding.editUser.text.toString().trim()
             val pass = binding.editPass.text.toString().trim()
 
-            if (user == "user" && pass == "pass"){
-                startActivity(Intent(this, LoginOkActivity::class.java))
+            if (username == "user" && pass == "pass"){
+                val i = Intent(this, LoginOkActivity::class.java)
+                i.putExtra("username", username)
+                startActivity(i)
+            //podemos colocar ambas as variáveis com o mesmo nome
+            //porque ou é executado um bloco de código, ou é o outro
+                //put extra, colocar também o username
             }
             else {
-                startActivity(Intent(this, LoginErradoActivity::class.java))
+                val i = Intent(this, LoginErradoActivity::class.java)
+                startActivity(i)
             }
         }
     }

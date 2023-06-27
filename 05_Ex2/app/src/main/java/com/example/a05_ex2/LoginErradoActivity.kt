@@ -20,7 +20,8 @@ class LoginErradoActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, "Login Errado", Toast.LENGTH_SHORT).show()
 
         binding.buttonVoltar.setOnClickListener {
-            startActivity(Intent(this, ActivityMainBinding::class.java))
+            //startActivity(Intent(this, ActivityMainBinding::class.java))
+            finish() //basta colocar finish para voltar
         }
     }
 }

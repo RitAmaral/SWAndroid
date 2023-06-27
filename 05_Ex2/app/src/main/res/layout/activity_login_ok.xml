@@ -9,10 +9,13 @@
     tools:context=".LoginOkActivity">
 
     <TextView
+        android:id="@+id/text_bemvindo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="casual"
         android:text="Bem-vindo!"
+        android:textColor="#E2F4417E"
         android:textSize="50sp"
-        android:textColor="#E2F4417E"/>
+        android:textStyle="bold" />
 
 </LinearLayout>
