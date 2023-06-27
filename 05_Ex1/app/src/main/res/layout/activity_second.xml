@@ -6,15 +6,23 @@
     android:layout_height="match_parent"
     android:background="#EDB8B4"
     android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp"
     tools:context=".SecondActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Bem-vindo à nova Activity"
-        android:textSize="34sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="32sp"
+        android:gravity="center"
+        android:fontFamily="casual"/>
+    <Button
+        android:id="@+id/button_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>
