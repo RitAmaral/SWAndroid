@@ -3,6 +3,7 @@ package com.example.a05_ex4
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.a05_ex4.databinding.ActivityMainBinding
+import kotlin.math.sqrt
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,6 +42,33 @@ class MainActivity : AppCompatActivity() {
             } else {
                 binding.textPrimo.text = "O número não é primo"
             }
+
+            //outra forma de fazer, é fazer funções:
+            //ParImpar(number)
+            //Primo(number)
+        }
+
+    }
+    /*
+    fun ParImpar(number: Int) {
+        if(number%2==0){
+            binding.textPar.text = "Número par"
+        } else {
+            binding.textPar.text = "Número ímpar"
         }
     }
+    fun Primo(number: Int) {
+        if (number <= 1) {
+            binding.textPrimo.text = "Número não é primo"
+            return
+        }
+        for (i in 2..sqrt(number.toDouble()).toInt()) {
+            if (number % i == 0) {
+                binding.textPrimo.text = "Número não é primo"
+                return
+            }
+        }
+        binding.textPrimo.text = "Número é primo"
+    }
+    */
 }
