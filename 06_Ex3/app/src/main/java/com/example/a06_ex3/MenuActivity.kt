@@ -16,14 +16,14 @@ class MenuActivity : AppCompatActivity() {
 
         binding.buttonRegisto.setOnClickListener {
             startActivity(Intent(this, RegistoActivity::class.java))
-        }
+        } //vai para registo activity
 
         binding.buttonLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
-        }
+        } //vai para login activity
 
         binding.buttonSobre.setOnClickListener {
             startActivity(Intent(this, SobreActivity::class.java))
-        }
+        }//vai para sobre activity
     }
 }
