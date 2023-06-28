@@ -42,4 +42,8 @@
 - [05 Ex3](05_Ex3) - Aula 26/06/2023 - Exercício 3 - splashcreen (handler)
 - [05 Ex4](05_Ex4) - Aula 26/06/2023 - Exercício 4 - número par/ímpar e primo/não primo
 - [05 Ex5](05_Ex5) - Aula 26/06/2023 - Exercício 5 - converter horas em semanas, dias e horas
+- [06 Ex1](06_Ex1) - Aula 28/06/2023 - Exercício 1 - mandar dados de formulário de uma activity para outra: put extra, get string
+- [06 Ex2](06_Ex2) - Aula 28/06/2023 - Exercício 2 - 3 activities, bundle
+- [06 Ex3](06_Ex3) - Aula 28/06/2023 - Exercício 3 - 5 activities, menu registo, login, sobre
+- [06 Ex4](06_Ex4) - Aula 28/06/2023 - Exercício 4 e 5 - checkbox
 
