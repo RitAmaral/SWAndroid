@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A7B3F6"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="casual"
+        android:text="Bem-vindo ao Restaurante \n Food and Drinks!"
+        android:textAlignment="center"
+        android:textColor="#5166E1"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <CheckBox
+            android:id="@+id/checkBox_vitela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vitela"
+            android:textColor="#F1E57C"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="416dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:text="10,00€" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/meat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <CheckBox
+            android:id="@+id/checkBox_salmao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salmão"
+            android:textColor="#F1E57C"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="416dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:text="11,00€" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/fish" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <CheckBox
+            android:id="@+id/checkBox_limonada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limonada"
+            android:textColor="#F1E57C"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="416dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:text="2,50€" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/lemonade" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox_agua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Água"
+            android:textColor="#F1E57C"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="416dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:text="1,00€" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/water" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_pedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F1E57C"
+        android:text="Efetuar Pedido"
+        android:textColor="#373D61"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>
