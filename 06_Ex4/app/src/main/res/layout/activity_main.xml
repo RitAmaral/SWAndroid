@@ -43,6 +43,16 @@
             android:layout_marginLeft="10dp"
             android:textSize="20sp"
             android:text="10,00€" />
+        <EditText
+            android:id="@+id/edit_qtnvit"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:minWidth="40dp"
+            android:text="0"
+            android:hint="Qnt"/>
 
         <ImageView
             android:id="@+id/imageView"
@@ -75,6 +85,16 @@
             android:layout_marginLeft="10dp"
             android:textSize="20sp"
             android:text="11,00€" />
+        <EditText
+            android:id="@+id/edit_qtnsal"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:minWidth="40dp"
+            android:text="0"
+            android:hint="Qnt"/>
 
         <ImageView
             android:id="@+id/imageView2"
@@ -107,6 +127,16 @@
             android:layout_marginLeft="10dp"
             android:textSize="20sp"
             android:text="2,50€" />
+        <EditText
+            android:id="@+id/edit_qtnlim"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:minWidth="40dp"
+            android:text="0"
+            android:hint="Qnt"/>
 
         <ImageView
             android:id="@+id/imageView3"
@@ -138,6 +168,16 @@
             android:layout_marginLeft="10dp"
             android:textSize="20sp"
             android:text="1,00€" />
+        <EditText
+            android:id="@+id/edit_qtnagua"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:minWidth="40dp"
+            android:text="0"
+            android:hint="Qnt"/>
 
         <ImageView
             android:id="@+id/imageView4"
@@ -153,6 +193,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#F1E57C"
         android:text="Efetuar Pedido"
+        android:textSize="20dp"
         android:textColor="#373D61"
         android:layout_marginTop="30dp"/>
 

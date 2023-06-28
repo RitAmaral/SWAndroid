@@ -14,65 +14,23 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.checkBoxSalmao.setOnClickListener {
-            binding.buttonPedido.setOnClickListener {
-                val salmao = "Salmão"
-                val i = Intent(this, SplashScreen::class.java)
-                i.putExtra("salmao", salmao) //envia o nome para outro lado
-                startActivity(i)
-            }
-        }
-        binding.checkBoxVitela.setOnClickListener {
-            binding.buttonPedido.setOnClickListener {
-                val vitela = "Vitela"
-                val i = Intent(this, SplashScreen::class.java)
-                i.putExtra("vitela", vitela)
-                startActivity(i)
-            }
-        }
-        binding.checkBoxLimonada.setOnClickListener {
-            binding.buttonPedido.setOnClickListener {
-                val limonada = "Limonada"
-                val i = Intent (this, SplashScreen::class.java)
-                i.putExtra("limonada", limonada)
-                startActivity(i)
-            }
-        }
-        binding.checkBoxAgua.setOnClickListener {
-            binding.buttonPedido.setOnClickListener {
-                val agua = "Água"
-                val i = Intent (this, SplashScreen::class.java)
-                i.putExtra("agua", agua)
-                startActivity(i)
-            }
-        }
-        /*
         binding.buttonPedido.setOnClickListener {
-            binding.checkBoxLimonada.setOnClickListener {
-                val limonada = "Limonada"
-                val i = Intent (this, SplashScreen::class.java)
-                i.putExtra("limonada", limonada)
-                startActivity(i)
-            }
-            binding.checkBoxAgua.setOnClickListener {
-                val agua = "Água"
-                val i = Intent (this, SplashScreen::class.java)
-                i.putExtra("agua", agua)
-                startActivity(i)
-            }
-            binding.checkBoxSalmao.setOnClickListener {
-                val salmao = "Salmão"
-                val i = Intent(this, SplashScreen::class.java)
-                i.putExtra("salmao", salmao) //envia o nome para outro lado
-                startActivity(i)
-            }
-            binding.checkBoxVitela.setOnClickListener {
-                val vitela = "Vitela"
-                val i = Intent(this, SplashScreen::class.java)
-                i.putExtra("vitela", vitela)
-                startActivity(i)
-            }
+            val qtnsal : Int = binding.editQtnsal.text.toString().toInt()
+            val qtnvit : Int = binding.editQtnvit.text.toString().toInt()
+            val qtnlim : Int = binding.editQtnlim.text.toString().toInt()
+            val qtnagua : Int = binding.editQtnagua.text.toString().toInt()
+
+            val i = Intent(this, SplashScreen::class.java)
+
+            if (binding.checkBoxSalmao.isChecked)
+                i.putExtra("qtnsal", qtnsal)
+            if(binding.checkBoxVitela.isChecked)
+                i.putExtra("qtnvit", qtnvit)
+            if (binding.checkBoxLimonada.isChecked)
+                i.putExtra("qtnlim", qtnlim)
+            if (binding.checkBoxAgua.isChecked)
+                i.putExtra("qtnagua", qtnagua)
+            startActivity(i)
         }
-        */
     }
 }

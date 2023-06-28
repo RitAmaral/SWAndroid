@@ -16,6 +16,8 @@ class SegundaActivity : AppCompatActivity() {
         binding = ActivitySegundaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //alternativa ao bundle, teria é que criar uma variavel j = intent para não perder os valores
+
         val i = intent
         val bundle = i.extras
 
