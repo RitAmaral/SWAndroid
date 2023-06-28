@@ -35,7 +35,7 @@ class PedidoActivity : AppCompatActivity() {
 
         if(qtnsal > 0) {
             texto = " Pedido: Salmão \n Quantidade: ${qtnsal} \n Preço total: ${precosaltot}€"
-        } 
+        }
         if(qtnvit > 0) {
             texto = " Pedido: Vitela \n Quantidade: ${qtnvit} \n Preço total: ${precovittot}€"
         }
