@@ -17,19 +17,18 @@
         android:text="Bem-vindo ao Restaurante \n Food and Drinks!"
         android:textAlignment="center"
         android:textColor="#5166E1"
-        android:textSize="32sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
 
         <CheckBox
             android:id="@+id/checkBox_vitela"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="Vitela"
             android:textColor="#F1E57C"
@@ -38,9 +37,9 @@
             tools:layout_editor_absoluteX="153dp"
             tools:layout_editor_absoluteY="416dp" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:textSize="20sp"
             android:text="10,00€" />
         <EditText
@@ -50,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="20sp"
+            android:gravity="center"
             android:minWidth="40dp"
             android:text="0"
             android:hint="Qnt"/>
@@ -65,13 +65,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
         <CheckBox
             android:id="@+id/checkBox_salmao"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="Salmão"
             android:textColor="#F1E57C"
@@ -80,9 +79,9 @@
             tools:layout_editor_absoluteX="153dp"
             tools:layout_editor_absoluteY="416dp" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:textSize="20sp"
             android:text="11,00€" />
         <EditText
@@ -91,6 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:gravity="center"
             android:textSize="20sp"
             android:minWidth="40dp"
             android:text="0"
@@ -107,24 +107,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
         <CheckBox
             android:id="@+id/checkBox_limonada"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
+            android:buttonTint="#F1E57C"
+            android:checked="false"
             android:text="Limonada"
             android:textColor="#F1E57C"
-            android:textStyle="bold"
+            android:textColorHighlight="#F1E57C"
+            android:textColorLink="#F1E57C"
             android:textSize="28sp"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="153dp"
             tools:layout_editor_absoluteY="416dp" />
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:textSize="20sp"
             android:text="2,50€" />
         <EditText
@@ -133,6 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:gravity="center"
             android:textSize="20sp"
             android:minWidth="40dp"
             android:text="0"
@@ -149,12 +154,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <CheckBox
             android:id="@+id/checkBox_agua"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="Água"
             android:textColor="#F1E57C"
@@ -163,9 +168,9 @@
             tools:layout_editor_absoluteX="153dp"
             tools:layout_editor_absoluteY="416dp" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:textSize="20sp"
             android:text="1,00€" />
         <EditText
@@ -174,6 +179,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:gravity="center"
             android:textSize="20sp"
             android:minWidth="40dp"
             android:text="0"
@@ -196,5 +202,12 @@
         android:textSize="20dp"
         android:textColor="#373D61"
         android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cafe"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>

@@ -16,10 +16,10 @@ class PedidoActivity : AppCompatActivity() {
 
         val i = intent
 
-        val qtnsal = i.extras?.getInt("qtnsal")!!.toDouble()
-        val qtnvit = i.extras?.getInt("qtnvit")!!.toDouble()
-        val qtnlim = i.extras?.getInt("qtnlim")!!.toDouble()
-        val qtnagua = i.extras?.getInt("qtnagua")!!.toDouble()
+        val qtnsal = i.extras?.getInt("qtnsal")!!.toInt()
+        val qtnvit = i.extras?.getInt("qtnvit")!!.toInt()
+        val qtnlim = i.extras?.getInt("qtnlim")!!.toInt()
+        val qtnagua = i.extras?.getInt("qtnagua")!!.toInt()
 
         val precovit : Double = 10.00
         val precosal : Double = 11.00
@@ -47,19 +47,19 @@ class PedidoActivity : AppCompatActivity() {
         }
         if(qtnsal > 0 && qtnagua > 0) {
             val total = precosaltot + precoagtot
-            texto = " Pedido: Salmão e Água \n Quantidade: ${qtnsal} e ${qtnagua} respetivamente \n Preço Total: ${total}"
+            texto = " Pedido: Salmão e Água \n Quantidade: ${qtnsal} e ${qtnagua} respetivamente \n Preço Total: ${total}€"
         }
         if(qtnsal > 0 && qtnlim > 0) {
             val total = precosaltot + precolimtot
-            texto = " Pedido: Salmão e Limonada \n Quantidade: ${qtnsal} e ${qtnlim} respetivamente \n Preço Total: ${total}"
+            texto = " Pedido: Salmão e Limonada \n Quantidade: ${qtnsal} e ${qtnlim} respetivamente \n Preço Total: ${total}€"
         }
         if(qtnvit > 0 && qtnagua > 0) {
             val total = precovittot + precoagtot
-            texto = " Pedido: Vitela e Água \n Quantidade: ${qtnvit} e ${qtnagua} respetivamente \n Preço Total: ${total}"
+            texto = " Pedido: Vitela e Água \n Quantidade: ${qtnvit} e ${qtnagua} respetivamente \n Preço Total: ${total}€"
         }
         if(qtnvit > 0 && qtnlim > 0) {
             val total = precovittot + precolimtot
-            texto = " Pedido: Vitela e Limonada \n Quantidade: ${qtnvit} e ${qtnlim} respetivamente \n Preço Total: ${total}"
+            texto = " Pedido: Vitela e Limonada \n Quantidade: ${qtnvit} e ${qtnlim} respetivamente \n Preço Total: ${total}€"
         }
 
         binding.textRes.text = texto

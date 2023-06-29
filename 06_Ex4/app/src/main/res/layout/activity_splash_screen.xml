@@ -12,8 +12,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A preparar o seu pedido"
+        android:text="A preparar o seu pedido.."
         android:textColor="#373D61"
         android:textSize="34sp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="288dp"
+        android:layout_height="380dp"
+        app:srcCompat="@drawable/cooking" />
+
 
 </LinearLayout>
