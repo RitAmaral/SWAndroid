@@ -20,7 +20,12 @@ class MainActivity : AppCompatActivity() {
             val morada = binding.editMorada.text.toString()
             val telefone = binding.editNumber.text.toString() //como não vou fazer nenhum cálculo, pode ficar como string
             val email = binding.editEmail.text.toString()
-            val genero = binding.editGenero.text.toString()
+            //val genero = binding.editGenero.text.toString() //passamos para radio button
+
+            var genero = "F"
+            if (binding.radioMasculino.isChecked) {
+                genero = "M"
+            }
 
             val i = Intent(this, SegundaActivity::class.java)
             i.putExtra("nome", nome) //envia o nome para outro lado

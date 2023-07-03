@@ -18,9 +18,9 @@ class SegundaActivity : AppCompatActivity() {
         val telefone = i.extras?.getString("telefone")
         val email = i.extras?.getString("email")
         //var genero = i.extras?.getString("genero")
-        val genero = i.extras?.getString("genero")?.lowercase() //passa para letra minuscula
+        val genero = i.extras?.getString("genero")?.lowercase() //passa para letra minuscula, mas com o radio button, já não é preciso
 
-        if(genero == "f" || genero == "feminino"){
+        if(genero == "f" /* || genero == "feminino" */){
             binding.textRes.text = "A ${nome}, do genero ${genero}, mora na rua ${morada}, tem o telefone ${telefone} e o email ${email}"
         } else {
             binding.textRes.text = "O ${nome}, do genero ${genero}, mora na rua ${morada}, tem o telefone ${telefone} e o email ${email}"

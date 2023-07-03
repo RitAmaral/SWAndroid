@@ -107,12 +107,28 @@
             android:layout_height="wrap_content"
             android:text="Género: " />
 
-        <EditText
+        <!-- <EditText
             android:id="@+id/edit_genero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:minWidth="200sp" />
+            android:minWidth="200sp" /> -->
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino"
+                android:id="@+id/radio_masculino" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feminino"
+                android:id="@+id/radio_feminino"
+                android:checked="true"/> <!--marca feminino por defeito -->
+        </RadioGroup>
     </LinearLayout>
 
     <Button
