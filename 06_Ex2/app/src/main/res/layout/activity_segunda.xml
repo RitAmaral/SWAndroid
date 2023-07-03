@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="Número"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:minWidth="100dp" />
 
     <Button

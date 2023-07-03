@@ -10,8 +10,6 @@ class MainActivity : AppCompatActivity() {
     //06 - Ex 2
 
     private lateinit var binding: ActivityMainBinding
-    /*result é a variável que vai permitir iniciarmos uma nova activity com a perspetiva de voltar
-    e realizar algum procedimento */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonOk.setOnClickListener {
-            val number = binding.editNumber.text.toString().toInt()
+            val number = binding.editNumber.text.toString().toDouble()
             val i = Intent(this, SegundaActivity::class.java)
             i.putExtra("number", number)
             startActivity(i)
