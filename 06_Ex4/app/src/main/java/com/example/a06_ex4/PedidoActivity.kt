@@ -32,7 +32,7 @@ class PedidoActivity : AppCompatActivity() {
         val precoagtot : Double = qtnagua * precoagua
 
         var texto = ""
-
+        //existe uma forma mais fácil de fazer isto, ver exercício do professor
         if(qtnsal > 0) {
             texto = " Pedido: Salmão \n Quantidade: ${qtnsal} \n Preço total: ${precosaltot}€"
         }

@@ -23,5 +23,12 @@ class SplashScreen : AppCompatActivity() {
             finish()
         }, 2000)
 
+        /*
+        ou: val i = intent
+        val j = Intent (...
+        j.putExtra(i)
+        startActivity(j)
+        finish()
+         */
     }
 }
