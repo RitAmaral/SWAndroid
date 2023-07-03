@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         binding.buttonOk.setOnClickListener {
             val nome = binding.editNome.text.toString()
             val morada = binding.editMorada.text.toString()
-            val telefone = binding.editNumber.text.toString()
+            val telefone = binding.editNumber.text.toString() //como não vou fazer nenhum cálculo, pode ficar como string
             val email = binding.editEmail.text.toString()
             val genero = binding.editGenero.text.toString()
 

@@ -16,9 +16,15 @@ class SegundaActivity : AppCompatActivity() {
         val nome = i.extras?.getString("nome") //isto traz o nome do main activity
         val morada = i.extras?.getString("morada")
         val telefone = i.extras?.getString("telefone")
-        var email = i.extras?.getString("email")
-        var genero = i.extras?.getString("genero")
+        val email = i.extras?.getString("email")
+        //var genero = i.extras?.getString("genero")
+        val genero = i.extras?.getString("genero")?.lowercase() //passa para letra minuscula
 
-        binding.textRes.text = "A ${nome}, do genero ${genero}, mora na rua ${morada}, tem o telefone ${telefone} e o email ${email}"
+        if(genero == "f" || genero == "feminino"){
+            binding.textRes.text = "A ${nome}, do genero ${genero}, mora na rua ${morada}, tem o telefone ${telefone} e o email ${email}"
+        } else {
+            binding.textRes.text = "O ${nome}, do genero ${genero}, mora na rua ${morada}, tem o telefone ${telefone} e o email ${email}"
+        }
+
     }
 }
