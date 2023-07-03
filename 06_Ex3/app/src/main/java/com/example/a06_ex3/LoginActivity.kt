@@ -16,14 +16,15 @@ class LoginActivity : AppCompatActivity() {
 
         binding.buttonLogin.setOnClickListener {
             val i = intent
-            val user = i.extras?.getString("user") //vai buscar user ao registo activity
-            val pass = i.extras?.getString("pass")
+            val usernameValido = i.extras?.getString("username") //vai buscar user ao registo activity
+            val passwordValido = i.extras?.getString("password")
 
             val username = binding.editUsername.text.toString().trim() //pede username ao utilizador
             val password = binding.editPassword.text.toString().trim()
 
-            if (username == user && password == pass) { //se igual, vai para a sobre activity
+            if (username == usernameValido && password == passwordValido) { //se igual, vai para a sobre activity
                 startActivity(Intent(this, SobreActivity::class.java))
+                finish()
             } else {
                 Toast.makeText(applicationContext, "Login errado", Toast.LENGTH_SHORT).show()
                 binding.editUsername.setText("") //se errado, põe o campo username vazio
