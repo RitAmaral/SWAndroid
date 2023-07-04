@@ -46,4 +46,9 @@
 - [06 Ex2](06_Ex2) - Aula 28/06/2023 - Exercício 2 - 3 activities, bundle
 - [06 Ex3](06_Ex3) - Aula 28/06/2023 - Exercício 3 - 5 activities, menu registo, login, sobre
 - [06 Ex4](06_Ex4) - Aula 28/06/2023 - Exercício 4 e 5 - checkbox
+- [07 ListaListViewString](07_ListaListViewString) - Aula 03/07/2023 - Exemplo sobre listas, listview
+- [07 ListViewObjetos](07_ListViewObjetos) - Aula 03/07/2023- Exemplo sobre classes e objetos
+- [07 Ex1](07_Ex1) - Aula 04/07/2023 - Exercício 1 - lista de nomes
+- [07 Ex2](07_Ex2) - Aula 04/07/2023 - Exercício 2 - lista de numeros, adicionar, editar e remover
+- [07 Ex3](07_Ex3) - Aula 04/07/2023 - Exercício 3 - lista de alunos (classe aluno - nome, morada, email), adicionar, editar e remover
 
