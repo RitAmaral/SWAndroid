@@ -14,10 +14,10 @@ class DadosActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val i = intent
-        val nome = i.extras?.getString("nome")
+        val nome = i.extras?.getString("nome") //extras é um potencial nulo, por isso devemos colocar ?
         val morada = i.extras?.getString("morada")
         val email = i.extras?.getString("email")
 
-        binding.textRes.text = "Nome: ${nome} \n Morada: ${morada} \n Email: ${email}"
+        binding.textRes.text = "Nome: ${nome} \nMorada: ${morada} \nEmail: ${email}"
     }
 }

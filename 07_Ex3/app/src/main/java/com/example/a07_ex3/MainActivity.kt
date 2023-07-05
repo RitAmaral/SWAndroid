@@ -24,30 +24,37 @@ class MainActivity : AppCompatActivity() {
         listaAluno.add(Aluno("Rui", "Rua Dezembro", "rui@gmail.com"))
         listaAluno.add(Aluno("António", "Rua Braga", "antonio@gmail.com"))
 
+        //posso colocar this ou application context neste caso em baixo
         val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaAluno)
-        binding.listaAlunos.adapter = arrayAdapter
+        binding.listaviewAlunos.adapter = arrayAdapter //ligar listview à lista
 
-        binding.listaAlunos.setOnItemClickListener { _, _, position, _ ->
+        binding.listaviewAlunos.setOnItemClickListener { _, _, position, _ ->
             val i = Intent(this, DadosActivity::class.java)
             i.putExtra("nome", listaAluno[position].nome)
             i.putExtra("morada", listaAluno[position].morada)
             i.putExtra("email", listaAluno[position].email)
             startActivity(i)
-        }
+        } //passar dados (nome morada e email) do item selecionado para a próxima activity
+
         binding.buttonAdicionar.setOnClickListener {
             val nome = binding.editNome.text.toString()
             val morada = binding.editMorada.text.toString()
             val email = binding.editEmail.text.toString()
             listaAluno.add(Aluno(nome, morada, email))
-            arrayAdapter.notifyDataSetChanged()
+            arrayAdapter.notifyDataSetChanged() //notificar listview da alteração na lista
+            binding.editNome.setText("") //passar os campos para vazios após adição
+            binding.editMorada.setText("")
+            binding.editEmail.setText("")
         }
-        binding.listaAlunos.setOnItemLongClickListener { _, _, position, _ ->
+
+        binding.listaviewAlunos.setOnItemLongClickListener { _, _, position, _ ->
             binding.editNome.setText(listaAluno[position].nome)
             binding.editMorada.setText(listaAluno[position].morada)
             binding.editEmail.setText(listaAluno[position].email)
             pos = position
             true
-        }
+        } //qnd clicarmos longamente num item, os dados vão para os campos
+
         binding.buttonEditar.setOnClickListener {
             if (pos >= 0 && pos < listaAluno.size) {
                 listaAluno[pos].nome = binding.editNome.text.toString()
@@ -55,6 +62,9 @@ class MainActivity : AppCompatActivity() {
                 listaAluno[pos].email = binding.editEmail.text.toString()
                 pos = -1
                 arrayAdapter.notifyDataSetChanged()
+                binding.editNome.setText("") //passar os campos para vazios após edição
+                binding.editMorada.setText("")
+                binding.editEmail.setText("")
             }
         }
         binding.buttonRemover.setOnClickListener {
@@ -62,6 +72,9 @@ class MainActivity : AppCompatActivity() {
                 listaAluno.removeAt(pos)
                 pos = -1
                 arrayAdapter.notifyDataSetChanged()
+                binding.editNome.setText("") //passar os campos para vazios após eliminação
+                binding.editMorada.setText("")
+                binding.editEmail.setText("")
             }
         }
     }
