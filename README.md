@@ -51,4 +51,6 @@
 - [07 Ex1](07_Ex1) - Aula 04/07/2023 - Exercício 1 - lista de nomes
 - [07 Ex2](07_Ex2) - Aula 04/07/2023 - Exercício 2 - lista de numeros, adicionar, editar e remover
 - [07 Ex3](07_Ex3) - Aula 04/07/2023 - Exercício 3 - lista de alunos (classe aluno - nome, morada, email), adicionar, editar e remover
-
+- [09 Shared Preferences](09_SharedPreferences) - Aula 05/07/2023 - Shared Preferences - guardar dados em ficheiro xml
+- [09 Audio](09_Audio) - Aula 05/07/2023 - Audio - como colocar audio numa app (criar pasta raw dentro do res, inserir file audio mp3 lá)
+- [09 Ex1](09_Ex1) - Aula 05/07/2023 - Exercício 1 - Shared Preferences: username e password guardados em ficheiro xml
