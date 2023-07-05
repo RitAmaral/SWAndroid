@@ -13,6 +13,6 @@ class MainActivity : AppCompatActivity() {
         //2º colocar o ficheiro audio na pasta, depois escrever:
         val mediaPlayer = MediaPlayer.create(this, R.raw.audio)
         mediaPlayer.start()
-        
+
     }
 }
