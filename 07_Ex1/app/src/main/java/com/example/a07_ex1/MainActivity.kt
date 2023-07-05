@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         listaNomes.add("António")
 
         val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaNomes)
-        binding.listNomes.adapter = arrayAdapter
+        binding.listviewNomes.adapter = arrayAdapter
 
-        binding.listNomes.setOnItemClickListener { _, _, position, _ ->
+        binding.listviewNomes.setOnItemClickListener { _, _, position, _ ->
             Toast.makeText(applicationContext, "Olá ${listaNomes[position]}", Toast.LENGTH_SHORT).show()
         }
     }

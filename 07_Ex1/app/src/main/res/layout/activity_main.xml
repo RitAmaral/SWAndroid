@@ -20,7 +20,7 @@
         android:textStyle="bold" />
 
     <ListView
-        android:id="@+id/list_nomes"
+        android:id="@+id/listview_nomes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
