@@ -54,3 +54,5 @@
 - [09 Shared Preferences](09_SharedPreferences) - Aula 05/07/2023 - Shared Preferences - guardar dados em ficheiro xml
 - [09 Audio](09_Audio) - Aula 05/07/2023 - Audio - como colocar audio numa app (criar pasta raw dentro do res, inserir file audio mp3 lá)
 - [09 Ex1](09_Ex1) - Aula 05/07/2023 - Exercício 1 - Shared Preferences: username e password guardados em ficheiro xml
+- [09 Ex2](09_Ex2) - Aula 06/07/2023 - Exercício 2 - Shared Preferences: bloco de notas
+- [09 Ex3](09_Ex3) - Aula 06/07/2023 - Exercício 3 - 3 audios - 3 botões
