@@ -15,17 +15,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val sharedPreferences = this.getSharedPreferences("ficheiro", Context.MODE_PRIVATE)
-        val notaGravada = sharedPreferences.getString("NOTA", "").toString()
+        val sp = this.getSharedPreferences("ficheiro", Context.MODE_PRIVATE)
+        val notaGravada = sp.getString("NOTA", "").toString()
 
         binding.textRes.setText(notaGravada)
 
         binding.buttonGravar.setOnClickListener {
             val nota = binding.editNota.text.toString()
+            binding.textRes.text = nota
 
-            val editor: SharedPreferences.Editor = sharedPreferences.edit()
+            val editor: SharedPreferences.Editor = sp.edit()
             editor.putString("NOTA", nota)
             editor.apply()
+        }
+        //ao clicar na nota, ela aparece no campo edit nota
+        binding.textRes.setOnClickListener {
+            binding.editNota.setText(binding.textRes.text.toString())
         }
     }
 }
