@@ -27,15 +27,30 @@ class MainActivity : AppCompatActivity() {
         binding.editUser.setText(userGravado)
         binding.editPass.setText(passGravada)
 
-        binding.buttonAdd.setOnClickListener {
+        //Começar aqui:
+        binding.buttonEntrar.setOnClickListener {
             val username = binding.editUser.text.toString()
             val password = binding.editPass.text.toString()
-
-            Toast.makeText(applicationContext, "Login válido", Toast.LENGTH_SHORT).show()
-
             val editor: SharedPreferences.Editor = sharedPreferences.edit()
-            editor.putString("USERNAME", username) //o que vai aparecer no ficheiro xml
-            editor.putString("PASSWORD", password)
+
+            if(username == "user" && password == "pass") {
+                Toast.makeText(applicationContext, "Login válido", Toast.LENGTH_SHORT).show()
+                editor.putString("USERNAME", username) //o que vai aparecer no ficheiro xml
+                editor.putString("PASSWORD", password)
+            } else {
+                Toast.makeText(applicationContext, "Login inválido", Toast.LENGTH_SHORT).show()
+                editor.putString("USERNAME", "")
+                editor.putString("PASSWORD", "")
+            }
+            editor.apply()
+        }
+        //para limpar os campos e no ficheiro também limpa
+        binding.buttonLimpar.setOnClickListener {
+            binding.editUser.setText("")
+            binding.editPass.setText("")
+            val editor = sharedPreferences.edit()
+            editor.putString("USERNAME", "")
+            editor.putString("PASSWORD", "")
             editor.apply()
         }
     }

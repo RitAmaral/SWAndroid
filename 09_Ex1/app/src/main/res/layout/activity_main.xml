@@ -45,9 +45,26 @@
             android:gravity="center"
             android:minWidth="160dp" />
     </LinearLayout>
-    <Button
-        android:id="@+id/button_add"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Adicionar"/>
+        android:gravity="center"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_entrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Entrar" />
+
+        <Button
+            android:id="@+id/button_limpar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#AA1A1A"
+            android:text="Limpar" />
+    </LinearLayout>
 </LinearLayout>
