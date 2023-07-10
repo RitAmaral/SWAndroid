@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ola">Hola</string>
+    <string name="desenvolvedor">Desarrollado Por Rita</string>
+    <string name="nivel_de_bateria">Nível de bateria</string>
+</resources>

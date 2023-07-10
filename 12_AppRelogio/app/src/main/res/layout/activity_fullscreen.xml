@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/fullscreenBackgroundColor"
+    android:theme="@style/ThemeOverlay.12_AppRelogio.FullscreenContainer"
+    tools:context=".FullscreenActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tex_nivel_bateria"
+        android:layout_margin="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="100%" />
+
+    <ImageView
+        android:id="@+id/image_view_preferencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@android:drawable/ic_menu_preferences"
+        android:padding="20dp"
+        android:clickable="true"
+        android:focusable="true"/>
+    <!-- colocar clickable para podermos clicar nele, e também focusable (que se premir aparece um conjunto de opções, mas nós nao vamos implementar isso-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center|bottom"
+        android:orientation="horizontal">
+        <!-- center|bottom, alinha mas em baixo, os segundos assim ficam embaixo em vez de no meio -->
+        <TextClock
+            android:id="@+id/clock_horas_minutos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="hh:mm"
+            android:format24Hour="hh:mm"
+            android:text="00:00"
+            android:textSize="100sp" />
+
+        <TextClock
+            android:id="@+id/clock_segundos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="ss"
+            android:format24Hour="ss"
+            android:text="00"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/fundo"
+        android:layout_alignParentBottom="true">
+        <!-- em cima da cor, clicar na lampada show, extract color resource.. mudar o resource para fundo -->
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:id="@+id/check_nivel_bateria"
+            android:text="@string/nivel_de_bateria"
+            android:checked="true" />
+        <!-- checked true quer dizer que põe check automaticamente -->
+        <ImageView
+            android:id="@+id/image_view_fechar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:padding="20dp"
+            android:clickable="true"
+            android:focusable="true"/>
+        <!-- 4 partes para o 1º elemento, 1 parte para o 2º elemento. 5 seria 100% -->
+    </LinearLayout>
+
+</RelativeLayout>
