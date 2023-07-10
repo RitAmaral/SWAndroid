@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
     //botao lado direito, generate override methods:
     //ou apenas escrever:
-    
+
     override fun onStart() {
         super.onStart()
     }
