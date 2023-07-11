@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_marginVertical="10dp"
+    android:background="#00f00f"
     android:layout_height="wrap_content">
+
+    <!-- <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"/> -->
+    <!-- vai gerar um botão para cada elemento da lista-->
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text_modelo" />
+        android:id="@+id/text_modelo"
+        android:gravity="center"
+        android:textSize="20sp"/>
 
 </LinearLayout>
