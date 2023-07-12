@@ -13,7 +13,9 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
 
     val sql = arrayOf(
         "CREATE TABLE utilizador (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT);",
-        "INSERT INTO utilizador (username, password) VALUES ('user','pass')"
+        "INSERT INTO utilizador (username, password) VALUES ('user','pass')",
+        "INSERT INTO utilizador (username, password) VALUES ('Rita','123')",
+        "INSERT INTO utilizador (username, password) VALUES ('Bruno','prof')"
     )
 
     override fun onCreate(db: SQLiteDatabase?) {
