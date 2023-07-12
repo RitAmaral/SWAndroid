@@ -40,10 +40,6 @@ class RegistarActivity : AppCompatActivity() {
                 binding.editPass.setText("")
                 binding.editConfpass.setText("")
             } else {
-                /*val i = intent
-                i.putExtra("username", username) //necessário para levar user e pass para a login activity
-                i.putExtra("password", password)
-                setResult(1, i)*/
                 val res = db.insertUtilizador(username, password)
                 Toast.makeText(this, res.toString(), Toast.LENGTH_SHORT).show()
                 CarregarUtilizadores(db)
@@ -55,7 +51,6 @@ class RegistarActivity : AppCompatActivity() {
     private fun CarregarUtilizadores(db: DBHelper) {
         listaUtilizadores = db.selectAllUtilizadorLista()
         val utilizadorMock = UtilizadorMock()
-        //val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaUtilizadores)
         binding.recyclerView.adapter = UtilizadorListAdapter(
             utilizadorMock.listaUtilizadores, UtilizadorListAdapter.OnClickListener { utilizador ->
                 Toast.makeText(applicationContext, utilizador.username, Toast.LENGTH_SHORT).show()
