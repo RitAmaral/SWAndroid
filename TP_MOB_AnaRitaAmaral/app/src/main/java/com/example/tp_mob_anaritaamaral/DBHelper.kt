@@ -20,7 +20,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
         "INSERT INTO utilizador (username, password) VALUES ('user','pass')",
         "INSERT INTO utilizador (username, password) VALUES ('Rita','123')",
         "INSERT INTO utilizador (username, password) VALUES ('Bruno','prof')"
-    )
+    ) //Na tabela de utilizadores já temos 3 users com login aprovado ^
 
     override fun onCreate(db: SQLiteDatabase?) {
         sql.forEach {
@@ -62,7 +62,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
         return res
     }
 
-    //Atualizar Utilizador
+    //Atualizar Utilizador -- isto não precisa/vai ser usado
     fun updateUtilizador(id: Int, username: String, password: String): Int {
         val db = this.writableDatabase
         val contentValues = ContentValues()
@@ -91,7 +91,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
         return res
     }
 
-    //Remover Utilizador
+    //Remover Utilizador -- isto não precisa/vai ser usado
     fun deleteUtilizador(id: Int): Int { //colocar aqui o Int que apareceu quando passamos em cima do delete
         val db = this.writableDatabase
         val res = db.delete("utilizador","id=?",arrayOf(id.toString())) //se tiver a dar erro, passar em cima do delete, e ver que tem Int, logo colocar em cima ^

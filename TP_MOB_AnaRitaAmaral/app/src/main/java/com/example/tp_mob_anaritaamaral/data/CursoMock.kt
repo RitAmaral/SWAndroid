@@ -1,5 +1,6 @@
 package com.example.tp_mob_anaritaamaral.data
 
+import android.view.View
 import com.example.tp_mob_anaritaamaral.model.Curso
 import java.text.SimpleDateFormat
 import java.util.Locale
@@ -17,8 +18,9 @@ class CursoMock() {
         listaCursos.add(Curso(6, "Network & Cyber Security Administrator", "Porto", formatoData.parse("06-11-2023"), formatoData.parse("04-07-2024"), "Gratuito", 950, "3ªedição"))
         listaCursos.add(Curso(7, "Network & Cyber Security Administrator", "Lisboa", formatoData.parse("08-11-2023"), formatoData.parse("05-07-2024"), "Gratuito", 950, "2ªedição"))
 
-        for (i in 0 .. 15) {
+        for (i in 0 .. 4) {
             listaCursos.add(Curso(i, i.toString()))
         }
+
     }
 }

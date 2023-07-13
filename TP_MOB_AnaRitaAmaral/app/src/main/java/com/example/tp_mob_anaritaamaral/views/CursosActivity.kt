@@ -3,8 +3,10 @@ package com.example.tp_mob_anaritaamaral.views
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.tp_mob_anaritaamaral.AddCursoActivity
 import com.example.tp_mob_anaritaamaral.DBHelper
 import com.example.tp_mob_anaritaamaral.InfoCursoActivity
 import com.example.tp_mob_anaritaamaral.R
@@ -24,15 +26,11 @@ class CursosActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //ligação à base de dados
-        /*
         val db = DBHelper(this)
         listaCursos = ArrayList()
-        CarregarCursos(db) */
 
         //Definir adapter e layout:
         binding.reyclerViewCursos.layoutManager = LinearLayoutManager(this)
-
-        val db = DBHelper(this)
 
         val mock = CursoMock()
         /*
@@ -41,23 +39,32 @@ class CursosActivity : AppCompatActivity() {
                 Toast.makeText(this, curso.nome, Toast.LENGTH_SHORT).show()
             })
          */
+
         binding.reyclerViewCursos.adapter =
             CursoListAdapter(mock.listaCursos, CursoListAdapter.OnClickListener { curso ->
                 val cursoSelecionado = db.selectCursoByIDObjeto(curso.id)
 
-                //Ir para InfoCursoActivity com as info do curso selecionado
-                val i = Intent(this, InfoCursoActivity::class.java)
-                i.putExtra("nome", cursoSelecionado.nome)
-                i.putExtra("local", cursoSelecionado.local)
-                i.putExtra("dataInicial", cursoSelecionado.dataInicial)
-                i.putExtra("dataFinal", cursoSelecionado.dataFinal)
-                i.putExtra("preco", cursoSelecionado.preco)
-                i.putExtra("duracao", cursoSelecionado.duracao)
-                i.putExtra("edicao", cursoSelecionado.edicao)
-                startActivity(i)
-                db.close()
+                if (cursoSelecionado.nome.isEmpty()) {
+                    Toast.makeText(this, "Curso ainda não criado", Toast.LENGTH_SHORT).show()
+                } else {
+                    //Ir para InfoCursoActivity com as info do curso selecionado
+                    val i = Intent(this, InfoCursoActivity::class.java)
+                    i.putExtra("id", cursoSelecionado.id)
+                    i.putExtra("nome", cursoSelecionado.nome)
+                    i.putExtra("local", cursoSelecionado.local)
+                    i.putExtra("dataInicial", cursoSelecionado.dataInicial)
+                    i.putExtra("dataFinal", cursoSelecionado.dataFinal)
+                    i.putExtra("preco", cursoSelecionado.preco)
+                    i.putExtra("duracao", cursoSelecionado.duracao)
+                    i.putExtra("edicao", cursoSelecionado.edicao)
+                    startActivity(i)
+                    db.close()
+                }
             })
 
+        binding.buttonAdd.setOnClickListener {
+            startActivity(Intent(this, AddCursoActivity::class.java))
+        }
     }
     private fun CarregarCursos(db: DBHelper) {
         listaCursos = db.selectAllCursosLista()

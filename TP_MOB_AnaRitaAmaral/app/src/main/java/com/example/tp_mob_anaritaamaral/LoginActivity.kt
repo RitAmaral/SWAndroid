@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //ligação à base de dados, nota: username = teste3 ; password = 123
+        //ligação à base de dados
         val db = DBHelper(this)
         listaUtilizadores = ArrayList()
         CarregarUtilizadores(db)

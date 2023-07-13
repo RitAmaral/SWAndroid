@@ -2,6 +2,7 @@ package com.example.tp_mob_anaritaamaral
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tp_mob_anaritaamaral.databinding.ActivityInfoCursoBinding
 import com.example.tp_mob_anaritaamaral.model.Curso
 import java.text.SimpleDateFormat
@@ -19,6 +20,7 @@ class InfoCursoActivity : AppCompatActivity() {
 
         val i = intent
 
+        val id = i.extras?.getInt("id")
         val nome = i.extras?.getString("nome")
         val local = i.extras?.getString("local")
         val dataInicial1 = i.extras?.getString("dataInicial")
