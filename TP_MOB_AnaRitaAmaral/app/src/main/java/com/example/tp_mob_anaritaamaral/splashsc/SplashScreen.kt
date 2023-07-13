@@ -1,10 +1,12 @@
-package com.example.tp_mob_anaritaamaral
+package com.example.tp_mob_anaritaamaral.splashsc
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.example.tp_mob_anaritaamaral.views.MainActivity
+import com.example.tp_mob_anaritaamaral.R
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

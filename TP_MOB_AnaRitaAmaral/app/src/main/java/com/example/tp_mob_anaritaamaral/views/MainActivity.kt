@@ -1,11 +1,10 @@
-package com.example.tp_mob_anaritaamaral
+package com.example.tp_mob_anaritaamaral.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
+import com.example.tp_mob_anaritaamaral.LoginActivity
+import com.example.tp_mob_anaritaamaral.RegistarActivity
 import com.example.tp_mob_anaritaamaral.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

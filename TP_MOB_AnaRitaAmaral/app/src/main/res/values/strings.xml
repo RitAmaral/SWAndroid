@@ -3,4 +3,8 @@
     <string name="registar">Registar</string>
     <string name="entrar">Entrar</string>
     <string name="bem_vindo">Bem-vindo!</string>
+    <string name="o_cesae_digital_promove_a_realizacao_de_formacao_profissional_e_de_reconhecimento_a_validacao_e_certificacao_de_competencias_a_prestacao_de_servicos_e_apoio_tecnico_a_entidades_no_ambito_das_areas_das_tecnologias_da_informacao_e_da_comunicacao_tic_e_do_digital_regista_te_para_saberes_mais_sobre_a_nossa_oferta_formativa">O CESAE Digital promove a realização de formação profissional e de reconhecimento, a validação e certificação de competências, a prestação de serviços e apoio técnico a entidades no âmbito das áreas das Tecnologias da Informação e da Comunicação (TIC) e do digital. \nRegista-te para saberes mais sobre a nossa oferta formativa!</string>
+    <string name="cursos">Cursos</string>
+    <string name="sobre">Sobre</string>
+    <string name="title_activity_fullscreen_sobre" translatable="false">fullscreen</string>
 </resources>
