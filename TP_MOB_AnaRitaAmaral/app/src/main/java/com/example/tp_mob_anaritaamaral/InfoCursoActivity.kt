@@ -3,6 +3,8 @@ package com.example.tp_mob_anaritaamaral
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.tp_mob_anaritaamaral.adapter.CursoListAdapter
+import com.example.tp_mob_anaritaamaral.data.CursoMock
 import com.example.tp_mob_anaritaamaral.databinding.ActivityInfoCursoBinding
 import com.example.tp_mob_anaritaamaral.model.Curso
 import java.text.SimpleDateFormat
@@ -12,11 +14,26 @@ import java.util.Locale
 class InfoCursoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInfoCursoBinding
-
+    private lateinit var listaCursos: ArrayList<Curso>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInfoCursoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        //ligação à base de dados
+        val db = DBHelper(this)
+        listaCursos = ArrayList()
+
+        //Definir adapter e layout:
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+
+        val mock = CursoMock()
+
+        binding.recyclerView.adapter =
+            CursoListAdapter(mock.listaCursos, CursoListAdapter.OnClickListener { curso ->
+                 db.selectCursoByIDObjeto(curso.id)
+
 
         val i = intent
 
@@ -33,7 +50,11 @@ class InfoCursoActivity : AppCompatActivity() {
         val dataInicial: Date = formatoData.parse(dataInicial1)
         val dataFinal: Date = formatoData.parse(dataFinal1)
 
+
+
         binding.textRes.setText("Nome do Curso: $nome \nLocal: $local \nData Inicial: $dataInicial" +
                 "\nData Final: $dataFinal \nPreço: $preco€ \nDuração: $duracao horas \nEdição: $edicao")
-    }
-}
+
+
+    })
+}}

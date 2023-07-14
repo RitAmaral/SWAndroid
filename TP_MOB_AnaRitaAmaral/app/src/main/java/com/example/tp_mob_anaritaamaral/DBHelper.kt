@@ -46,7 +46,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
 
     //Inserir curso:
     fun insertCurso(nome: String, local: String,
-                    dataInicial: Date, dataFinal: Date, preco: Double,
+                    dataInicial: Date, dataFinal: Date, preco: String,
                     duracao: Int, edicao: String) : Long {
         val db = this.writableDatabase //ligação à base de dados
         val contentValues = ContentValues()

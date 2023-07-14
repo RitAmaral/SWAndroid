@@ -7,4 +7,12 @@
     <string name="cursos">Cursos</string>
     <string name="sobre">Sobre</string>
     <string name="title_activity_fullscreen_sobre" translatable="false">fullscreen</string>
+    <string name="adicionar_curso">Adicionar Curso</string>
+    <string name="nome">Nome:</string>
+    <string name="local">Local:</string>
+    <string name="inicio">Início:</string>
+    <string name="fim">Fim:</string>
+    <string name="preco">Preço:</string>
+    <string name="duracao">Duração:</string>
+    <string name="edicao">Edição:</string>
 </resources>

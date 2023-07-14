@@ -6,4 +6,12 @@
     <string name="o_cesae_digital_promove_a_realizacao_de_formacao_profissional_e_de_reconhecimento_a_validacao_e_certificacao_de_competencias_a_prestacao_de_servicos_e_apoio_tecnico_a_entidades_no_ambito_das_areas_das_tecnologias_da_informacao_e_da_comunicacao_tic_e_do_digital_regista_te_para_saberes_mais_sobre_a_nossa_oferta_formativa">CESAE Digital promotes professional training and recognition, the validation and certification of skills, the provision of services and technical support to entities within the areas of Information and Communication Technologies (ICT) and digital. Register to find out more about our training offer!</string>
     <string name="cursos">Courses</string>
     <string name="sobre">About</string>
+    <string name="adicionar_curso">Add course</string>
+    <string name="nome">Name:</string>
+    <string name="local">City:</string>
+    <string name="inicio">Start:</string>
+    <string name="fim">End:</string>
+    <string name="preco">Price:</string>
+    <string name="duracao">Duration:</string>
+    <string name="edicao">Edition:</string>
 </resources>
