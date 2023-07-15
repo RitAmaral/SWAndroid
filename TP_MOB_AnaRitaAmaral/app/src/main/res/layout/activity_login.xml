@@ -65,11 +65,19 @@
         android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
+        android:layout_marginVertical="30dp"
         android:backgroundTint="#009DE2"
         android:padding="15dp"
         android:text="@string/entrar"
         android:textSize="24sp" />
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="10dp"
+        android:layout_height="79dp"
+        app:srcCompat="?android:attr/fingerprintAuthDrawable" />
 
     <RelativeLayout
         android:layout_width="wrap_content"

@@ -15,4 +15,7 @@
     <string name="preco">Preço:</string>
     <string name="duracao">Duração:</string>
     <string name="edicao">Edição:</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
 </resources>

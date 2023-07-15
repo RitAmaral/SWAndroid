@@ -1,5 +1,6 @@
 package com.example.tp_mob_anaritaamaral
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +16,7 @@ class InfoCursoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInfoCursoBinding
     private lateinit var listaCursos: ArrayList<Curso>
+    @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInfoCursoBinding.inflate(layoutInflater)
@@ -34,27 +36,23 @@ class InfoCursoActivity : AppCompatActivity() {
             CursoListAdapter(mock.listaCursos, CursoListAdapter.OnClickListener { curso ->
                  db.selectCursoByIDObjeto(curso.id)
 
+            val i = intent
 
-        val i = intent
+            val id = i.extras?.getInt("id")
+            val nome = i.extras?.getString("nome")
+            val local = i.extras?.getString("local")
+            val dataInicial1 = i.extras?.getString("dataInicial")
+            val dataFinal1 = i.extras?.getString("dataFinal")
+            val preco = i.extras?.getString("preco")
+            val duracao = i.extras?.getInt("duracao")
+            val edicao = i.extras?.getString("edicao")
 
-        val id = i.extras?.getInt("id")
-        val nome = i.extras?.getString("nome")
-        val local = i.extras?.getString("local")
-        val dataInicial1 = i.extras?.getString("dataInicial")
-        val dataFinal1 = i.extras?.getString("dataFinal")
-        val preco = i.extras?.getString("preco")
-        val duracao = i.extras?.getInt("duracao")
-        val edicao = i.extras?.getString("edicao")
+            val formatoData = SimpleDateFormat("dd-MM-yyyy")
+            val dataInicial: Date = formatoData.parse(dataInicial1)
+            val dataFinal: Date = formatoData.parse(dataFinal1)
 
-        val formatoData = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
-        val dataInicial: Date = formatoData.parse(dataInicial1)
-        val dataFinal: Date = formatoData.parse(dataFinal1)
-
-
-
-        binding.textRes.setText("Nome do Curso: $nome \nLocal: $local \nData Inicial: $dataInicial" +
-                "\nData Final: $dataFinal \nPreço: $preco€ \nDuração: $duracao horas \nEdição: $edicao")
-
+            binding.textRes.text = "Nome do Curso: $nome \nLocal: $local \nData Inicial: $dataInicial" +
+                "\nData Final: $dataFinal \nPreço: $preco€ \nDuração: $duracao horas \nEdição: $edicao"
 
     })
 }}

@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adicionar Curso"
+        android:text="@string/adicionar_curso"
         android:textSize="40sp"
         android:layout_marginVertical="20dp"
         android:textColor="@color/rosa"
@@ -80,7 +80,7 @@
             android:id="@+id/edit_inicio"
             android:inputType="date"
             android:textSize="20sp"
-            android:hint="dd/MM/yyyy" />
+            android:hint="dd-MM-yyyy" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
             android:inputType="date"
             android:id="@+id/edit_fim"
             android:textSize="20sp"
-            android:hint="dd/MM/yyyy" />
+            android:hint="dd-MM-yyyy" />
 
     </LinearLayout>
 
@@ -163,6 +163,11 @@
         android:textSize="20sp"
         android:layout_marginVertical="20dp"
         android:backgroundTint="#009DE2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view_cur"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"

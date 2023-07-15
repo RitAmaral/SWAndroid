@@ -14,4 +14,7 @@
     <string name="preco">Price:</string>
     <string name="duracao">Duration:</string>
     <string name="edicao">Edition:</string>
+    <string name="adicionar">Add</string>
+    <string name="editar">Edit</string>
+    <string name="eliminar">Delete</string>
 </resources>

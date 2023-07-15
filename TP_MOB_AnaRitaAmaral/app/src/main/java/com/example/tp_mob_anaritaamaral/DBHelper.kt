@@ -115,7 +115,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
         return cursor
     }
 
-    //Selecionar todos os Cursos
+    //Selecionar todos os Cursos; Cursor: elemento que vamos puxar da base de dados
     fun selectAllCursoCursor(): Cursor {
         val db = this.readableDatabase
         val cursor = db.rawQuery("SELECT * FROM cursos", null)
@@ -196,7 +196,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
             val edicao = cursor.getString(edicaoIndex)
 
             //acrescentar para as datas não darem erro
-            val formatoData = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+            val formatoData = SimpleDateFormat("dd-MM-yyyy")
             val dataInicial = formatoData.parse(dataInicial1)
             val dataFinal = formatoData.parse(dataFinal1)
 
@@ -256,7 +256,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
                 val edicao = cursor.getString(edicaoIndex)
 
                 //acrescentar para as datas não darem erro
-                val formatoData = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+                val formatoData = SimpleDateFormat("dd-MM-yyyy")
                 val dataInicial = formatoData.parse(dataInicial1)
                 val dataFinal = formatoData.parse(dataFinal1)
 

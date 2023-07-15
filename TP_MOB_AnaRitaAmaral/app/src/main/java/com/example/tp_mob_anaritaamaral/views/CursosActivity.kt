@@ -33,13 +33,14 @@ class CursosActivity : AppCompatActivity() {
         binding.reyclerViewCursos.layoutManager = LinearLayoutManager(this)
 
         val mock = CursoMock()
-        /*
+
         binding.reyclerViewCursos.adapter =
             CursoListAdapter(mock.listaCursos, CursoListAdapter.OnClickListener { curso ->
-                Toast.makeText(this, curso.nome, Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, InfoCursoActivity::class.java))
             })
-         */
 
+
+        /*
         binding.reyclerViewCursos.adapter =
             CursoListAdapter(mock.listaCursos, CursoListAdapter.OnClickListener { curso ->
                 val cursoSelecionado = db.selectCursoByIDObjeto(curso.id)
@@ -61,9 +62,17 @@ class CursosActivity : AppCompatActivity() {
                     db.close()
                 }
             })
-
+        */
         binding.buttonAdd.setOnClickListener {
             startActivity(Intent(this, AddCursoActivity::class.java))
+        }
+
+        binding.buttonEditar.setOnClickListener {
+
+        }
+
+        binding.buttonEliminar.setOnClickListener {
+
         }
     }
     private fun CarregarCursos(db: DBHelper) {

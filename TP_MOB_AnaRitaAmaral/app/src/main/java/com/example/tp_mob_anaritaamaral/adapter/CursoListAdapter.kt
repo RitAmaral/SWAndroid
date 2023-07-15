@@ -9,7 +9,8 @@ import com.example.tp_mob_anaritaamaral.R
 import com.example.tp_mob_anaritaamaral.model.Curso
 import kotlinx.coroutines.NonDisposableHandle.parent
 
-class CursoListAdapter (val listaCurso: ArrayList<Curso>, val onClickListener: OnClickListener) : RecyclerView.Adapter<CursoListAdapter.CursoViewHolder>() {
+class CursoListAdapter (val listaCursos: ArrayList<Curso>, val onClickListener: OnClickListener) :
+    RecyclerView.Adapter<CursoListAdapter.CursoViewHolder>() {
 
     class CursoViewHolder (ItemView: View) : RecyclerView.ViewHolder(ItemView) { //vai buscar a linha da recycler view:
         val textView: TextView = itemView.findViewById(R.id.text_nome) //text_nome -> row_curso_list
@@ -25,12 +26,12 @@ class CursoListAdapter (val listaCurso: ArrayList<Curso>, val onClickListener: O
         return CursoViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return listaCurso.size
+    override fun getItemCount(): Int { //quantos elementos temos na lista de cursos
+        return listaCursos.size
     }
 
     override fun onBindViewHolder(holder: CursoViewHolder, position: Int) {
-        val curso = listaCurso[position]
+        val curso = listaCursos[position]
 
         holder.textView.setText("$curso")
         holder.itemView.setOnClickListener {
