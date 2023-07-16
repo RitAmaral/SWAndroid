@@ -36,6 +36,7 @@ class InfoCursoActivity : AppCompatActivity() {
             CursoListAdapter(mock.listaCursos, CursoListAdapter.OnClickListener { curso ->
                  db.selectCursoByIDObjeto(curso.id)
 
+            /*    //não acho que faça sentido colocar intent.. visto que os dados estão guardados na base de dados
             val i = intent
 
             val id = i.extras?.getInt("id")
@@ -53,6 +54,6 @@ class InfoCursoActivity : AppCompatActivity() {
 
             binding.textRes.text = "Nome do Curso: $nome \nLocal: $local \nData Inicial: $dataInicial" +
                 "\nData Final: $dataFinal \nPreço: $preco€ \nDuração: $duracao horas \nEdição: $edicao"
-
+            */
     })
 }}
