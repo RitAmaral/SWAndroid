@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.provider.Contacts.SettingsColumns.KEY
 import com.example.tp_mob_anaritaamaral.model.Curso
 import com.example.tp_mob_anaritaamaral.model.Utilizador
 import java.text.SimpleDateFormat
@@ -15,6 +16,7 @@ import java.util.Locale
 class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1) { //"nome da base de dados"
     //implementar membros (oncreate e onupgrade)
 
+    //tabela utilizadores
     val sql = arrayOf(
         "CREATE TABLE utilizador (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT);",
         "INSERT INTO utilizador (username, password) VALUES ('user','pass')",
@@ -22,14 +24,41 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
         "INSERT INTO utilizador (username, password) VALUES ('Bruno','prof')"
     ) //Na tabela de utilizadores já temos 3 users com login aprovado ^
 
+    //tabela cursos
+    val sqlCursos = arrayOf(
+        "CREATE TABLE cursos (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, " +
+                "local TEXT, dataInicial TEXT, dataFinal TEXT, preco REAL," +
+                "duracao INTEGER, edicao TEXT);",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
+                "('Software Developer', 'Porto', '02-10-2023', '11-06-2024', 1000, '4ªedição');",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
+                "('Software Developer', 'Lisboa', '04-10-2023', '28-06-2024', 1000, '2ªedição');",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
+                "('Data Analyst', 'Lisboa', '11-10-2023', '28-06-2024', 1050, '1ªedição');",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
+                "('Data Analyst', 'Porto', '16-10-2023', '05-07-2024', 1050, '3ªedição');",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
+                "('Front-End Developer', 'Lisboa', '18-10-2023', '26-06-2024', 1000, '1ªedição');",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
+                "('Network & Cyber Security Administrator', 'Porto', '06-11-2023', '04-07-2024', 950, '3ªedição');",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
+                "('Network & Cyber Security Administrator', 'Lisboa', '08-11-2023', '05-07-2024', 950, '2ªedição');"
+    ) //real = float
+
+
     override fun onCreate(db: SQLiteDatabase?) {
         sql.forEach {
+            db?.execSQL(it)
+        }
+        sqlCursos.forEach {
             db?.execSQL(it)
         }
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("DROP TABLE utilizador")
+        onCreate(db)
+        db?.execSQL("DROP TABLE cursos")
         onCreate(db)
     }
 

@@ -32,11 +32,15 @@ class CursosActivity : AppCompatActivity() {
         //Definir adapter e layout:
         binding.reyclerViewCursos.layoutManager = LinearLayoutManager(this)
 
+        //val carregarCursos = CarregarCursos(db)
+
         val mock = CursoMock()
 
         binding.reyclerViewCursos.adapter =
             CursoListAdapter(mock.listaCursos, CursoListAdapter.OnClickListener { curso ->
-                startActivity(Intent(this, InfoCursoActivity::class.java))
+                val i = Intent(this, InfoCursoActivity::class.java)
+                i.putExtra("id", curso.id) //levar apenas id para infocurso
+                startActivity(i)
             })
 
 
