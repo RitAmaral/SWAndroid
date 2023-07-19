@@ -5,7 +5,6 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.provider.Contacts.SettingsColumns.KEY
 import com.example.tp_mob_anaritaamaral.model.Curso
 import com.example.tp_mob_anaritaamaral.model.Utilizador
 import java.text.SimpleDateFormat
@@ -30,19 +29,19 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
                 "local TEXT, dataInicial TEXT, dataFinal TEXT, preco REAL," +
                 "duracao INTEGER, edicao TEXT);",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Software Developer', 'Porto', '02-10-2023', '11-06-2024', 1000, '4ªedição');",
+                "('Software Developer', 'Porto', '02-10-2023', '11-06-2024', 0, 1000, '4ªedição');",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Software Developer', 'Lisboa', '04-10-2023', '28-06-2024', 1000, '2ªedição');",
+                "('Software Developer', 'Lisboa', '04-10-2023', '28-06-2024', 0, 1000, '2ªedição');",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Data Analyst', 'Lisboa', '11-10-2023', '28-06-2024', 1050, '1ªedição');",
+                "('Data Analyst', 'Lisboa', '11-10-2023', '28-06-2024', 0, 1050, '1ªedição');",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Data Analyst', 'Porto', '16-10-2023', '05-07-2024', 1050, '3ªedição');",
+                "('Data Analyst', 'Porto', '16-10-2023', '05-07-2024', 0, 1050, '3ªedição');",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Front-End Developer', 'Lisboa', '18-10-2023', '26-06-2024', 1000, '1ªedição');",
+                "('Front-End Developer', 'Lisboa', '18-10-2023', '26-06-2024', 0, 1000, '1ªedição');",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Network & Cyber Security Administrator', 'Porto', '06-11-2023', '04-07-2024', 950, '3ªedição');",
+                "('Network & Cyber Security Administrator', 'Porto', '06-11-2023', '04-07-2024', 0, 950, '3ªedição');",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Network & Cyber Security Administrator', 'Lisboa', '08-11-2023', '05-07-2024', 950, '2ªedição');"
+                "('Network & Cyber Security Administrator', 'Lisboa', '08-11-2023', '05-07-2024', 0, 950, '2ªedição');"
     ) //real = float
 
 
@@ -61,6 +60,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
         db?.execSQL("DROP TABLE cursos")
         onCreate(db)
     }
+
 
     //Inserir utilizador:
     fun insertUtilizador(username: String, password: String): Long {

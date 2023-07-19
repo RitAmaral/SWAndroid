@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.tp_mob_anaritaamaral.adapter.UtilizadorListAdapter
-import com.example.tp_mob_anaritaamaral.data.UtilizadorMock
 import com.example.tp_mob_anaritaamaral.databinding.ActivityLoginBinding
 import com.example.tp_mob_anaritaamaral.model.Utilizador
 import java.util.ArrayList

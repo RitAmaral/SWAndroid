@@ -1,13 +1,9 @@
 package com.example.tp_mob_anaritaamaral
 
-import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tp_mob_anaritaamaral.adapter.UtilizadorListAdapter
-import com.example.tp_mob_anaritaamaral.data.UtilizadorMock
 import com.example.tp_mob_anaritaamaral.databinding.ActivityRegistarBinding
 import com.example.tp_mob_anaritaamaral.model.Utilizador
 import java.util.ArrayList
@@ -50,9 +46,8 @@ class RegistarActivity : AppCompatActivity() {
 
     private fun CarregarUtilizadores(db: DBHelper) {
         listaUtilizadores = db.selectAllUtilizadorLista()
-        val utilizadorMock = UtilizadorMock()
         binding.recyclerView.adapter = UtilizadorListAdapter(
-            utilizadorMock.listaUtilizadores, UtilizadorListAdapter.OnClickListener { utilizador ->
+            listaUtilizadores, UtilizadorListAdapter.OnClickListener { utilizador ->
                 Toast.makeText(applicationContext, utilizador.username, Toast.LENGTH_SHORT).show()
             })
     }
