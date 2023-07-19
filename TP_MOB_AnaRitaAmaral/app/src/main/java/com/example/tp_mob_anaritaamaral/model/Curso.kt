@@ -8,7 +8,7 @@ import java.util.Date
 
 class Curso (var id: Int = 0, var nome: String = "", var local: String = "",
              var dataInicial: Date = Date(), var dataFinal: Date = Date(), var preco: String = "",
-             var duracao: Int = 0, var edicao: String = "") {
+             var duracao: Int = 0, var edicao: String = "", var imagemID: Int = 0) {
 
     override fun toString(): String {
         return "$nome | $local - ${formatarData(dataInicial)}"

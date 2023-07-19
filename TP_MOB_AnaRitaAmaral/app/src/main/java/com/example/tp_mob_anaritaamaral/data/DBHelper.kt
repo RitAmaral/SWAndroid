@@ -1,4 +1,4 @@
-package com.example.tp_mob_anaritaamaral
+package com.example.tp_mob_anaritaamaral.data
 
 import android.content.ContentValues
 import android.content.Context

@@ -3,8 +3,6 @@ package com.example.tp_mob_anaritaamaral.views
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.tp_mob_anaritaamaral.LoginActivity
-import com.example.tp_mob_anaritaamaral.RegistarActivity
 import com.example.tp_mob_anaritaamaral.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

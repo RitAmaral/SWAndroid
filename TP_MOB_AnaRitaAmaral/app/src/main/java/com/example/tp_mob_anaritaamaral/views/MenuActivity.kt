@@ -1,11 +1,10 @@
-package com.example.tp_mob_anaritaamaral
+package com.example.tp_mob_anaritaamaral.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.tp_mob_anaritaamaral.databinding.ActivityMenuBinding
 import com.example.tp_mob_anaritaamaral.fullscreen.FullscreenSobreActivity
-import com.example.tp_mob_anaritaamaral.views.CursosActivity
 
 class MenuActivity : AppCompatActivity() {
 

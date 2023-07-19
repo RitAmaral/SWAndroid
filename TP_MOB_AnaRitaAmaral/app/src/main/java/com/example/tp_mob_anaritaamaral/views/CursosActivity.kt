@@ -6,9 +6,7 @@ import android.os.Bundle
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.tp_mob_anaritaamaral.AddCursoActivity
-import com.example.tp_mob_anaritaamaral.DBHelper
-import com.example.tp_mob_anaritaamaral.InfoCursoActivity
+import com.example.tp_mob_anaritaamaral.data.DBHelper
 import com.example.tp_mob_anaritaamaral.adapter.CursoListAdapter
 import com.example.tp_mob_anaritaamaral.databinding.ActivityCursosBinding
 import com.example.tp_mob_anaritaamaral.model.Curso

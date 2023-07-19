@@ -1,7 +1,8 @@
-package com.example.tp_mob_anaritaamaral
+package com.example.tp_mob_anaritaamaral.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.tp_mob_anaritaamaral.data.DBHelper
 import com.example.tp_mob_anaritaamaral.databinding.ActivityInfoCursoBinding
 import com.example.tp_mob_anaritaamaral.model.Curso
 

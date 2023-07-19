@@ -1,12 +1,11 @@
-package com.example.tp_mob_anaritaamaral
+package com.example.tp_mob_anaritaamaral.views
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.tp_mob_anaritaamaral.adapter.CursoListAdapter
+import com.example.tp_mob_anaritaamaral.data.DBHelper
 import com.example.tp_mob_anaritaamaral.databinding.ActivityAddCursoBinding
-import com.example.tp_mob_anaritaamaral.model.Curso
 import java.text.SimpleDateFormat
 import java.util.Date
 

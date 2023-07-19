@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/azul_fundo"
     android:gravity="center"
-    tools:context=".RegistarActivity">
+    tools:context=".views.RegistarActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,6 +36,7 @@
             android:id="@+id/edit_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableEnd="@android:drawable/ic_menu_myplaces"
             android:minWidth="200dp" /> <!-- dimensão/largura mínima do elemento-->
 
     </LinearLayout>
@@ -58,6 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:drawableEnd="@android:drawable/ic_lock_idle_lock"
             android:minWidth="200dp" />
     </LinearLayout>
     <LinearLayout

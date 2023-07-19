@@ -1,9 +1,12 @@
-package com.example.tp_mob_anaritaamaral
+package com.example.tp_mob_anaritaamaral.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.widget.Toast
+import com.example.tp_mob_anaritaamaral.data.DBHelper
 import com.example.tp_mob_anaritaamaral.databinding.ActivityLoginBinding
 import com.example.tp_mob_anaritaamaral.model.Utilizador
 import java.util.ArrayList
@@ -12,6 +15,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var listaUtilizadores: ArrayList<Utilizador>
+    private var passwordVisivel = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,11 +46,28 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Login errado! Tente novamente.", Toast.LENGTH_SHORT).show()
                 binding.editUsername.setText("") //limpa campos
                 binding.editPassword.setText("")
+                }
             }
+        //carregar no icon para mostrar e esconder password
+        binding.imageMostrar.setOnClickListener {
+            PasswordVisivel()
         }
+
     }
 
     private fun CarregarUtilizadores(db: DBHelper) {
         listaUtilizadores = db.selectAllUtilizadorLista()
+    }
+    private fun PasswordVisivel() {
+        passwordVisivel = !passwordVisivel
+        val transformationMethod =
+            if (passwordVisivel)  {
+                HideReturnsTransformationMethod.getInstance()
+            }
+            else {
+                PasswordTransformationMethod.getInstance()
+            }
+
+        binding.editPassword.transformationMethod = transformationMethod
     }
 }

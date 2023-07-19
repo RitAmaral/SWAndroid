@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/azul_fundo"
     android:gravity="center"
-    tools:context=".MenuActivity">
+    tools:context=".views.MenuActivity">
 
     <ImageView
         android:id="@+id/imageView4"

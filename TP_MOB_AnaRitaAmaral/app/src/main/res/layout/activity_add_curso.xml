@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/azul_fundo"
-    tools:context=".AddCursoActivity">
+    tools:context=".views.AddCursoActivity">
 
     <TextView
         android:layout_width="wrap_content"

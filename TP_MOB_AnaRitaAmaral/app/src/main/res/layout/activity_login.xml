@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/azul_fundo"
     android:gravity="center"
-    tools:context=".LoginActivity">
+    tools:context=".views.LoginActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
             android:id="@+id/edit_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="200dp"
+            android:minWidth="180dp"
             android:text="user" />
 
     </LinearLayout>
@@ -59,8 +59,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:minWidth="200dp"
+            android:minWidth="180dp"
             android:text="pass" />
+
+        <ImageView
+            android:id="@+id/imageMostrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_view" />
+
     </LinearLayout>
 
     <Button
