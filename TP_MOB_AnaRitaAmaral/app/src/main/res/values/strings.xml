@@ -18,4 +18,14 @@
     <string name="adicionar">Adicionar</string>
     <string name="editar">Editar</string>
     <string name="eliminar">Eliminar</string>
+    <string name="curso_adicionado">Curso Adicionado</string>
+    <string name="erro_curso_nao_adicionado">Erro: Curso não adicionado</string>
+    <string name="id_imagem">ID Imagem:</string>
+    <string name="imagem">Imagem</string>
+    <string name="username" translatable="false">Username:</string>
+    <string name="password" translatable="false">Password:</string>
+    <string name="confirmar_password">Confirmar Password:</string>
+    <string name="as_passwords_nao_correspondem_tente_novamente">As Passwords não correspondem! Tente novamente.</string>
+    <string name="o_campo_de_username_nao_pode_estar_vazio">O campo de username não pode estar vazio.</string>
+    <string name="login_errado_tente_novamente">Login errado! Tente novamente.</string>
 </resources>

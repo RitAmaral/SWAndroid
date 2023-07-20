@@ -17,4 +17,12 @@
     <string name="adicionar">Add</string>
     <string name="editar">Edit</string>
     <string name="eliminar">Delete</string>
+    <string name="curso_adicionado">Course Added</string>
+    <string name="erro_curso_nao_adicionado">Error: Course not added</string>
+    <string name="id_imagem">Image ID:</string>
+    <string name="imagem">Image</string>
+    <string name="confirmar_password">Confirm Password:</string>
+    <string name="as_passwords_nao_correspondem_tente_novamente">Passwords do not match! Try again.</string>
+    <string name="o_campo_de_username_nao_pode_estar_vazio">The username field cannot be empty.</string>
+    <string name="login_errado_tente_novamente">Login incorrect! Try again.</string>
 </resources>

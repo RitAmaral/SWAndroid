@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.widget.Toast
+import com.example.tp_mob_anaritaamaral.R
 import com.example.tp_mob_anaritaamaral.data.DBHelper
 import com.example.tp_mob_anaritaamaral.databinding.ActivityLoginBinding
 import com.example.tp_mob_anaritaamaral.model.Utilizador
@@ -43,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(Intent(this, MenuActivity::class.java)) //vamos para o menu ver os cursos
                 finish()
             } else {
-                Toast.makeText(applicationContext, "Login errado! Tente novamente.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, getString(R.string.login_errado_tente_novamente), Toast.LENGTH_SHORT).show()
                 binding.editUsername.setText("") //limpa campos
                 binding.editPassword.setText("")
                 }

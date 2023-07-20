@@ -78,9 +78,10 @@
             android:minWidth="150dp"
             android:gravity="center"
             android:id="@+id/edit_inicio"
-            android:inputType="date"
+            android:inputType="text"
             android:textSize="20sp"
             android:hint="dd-MM-yyyy" />
+        <!--android:inputType="date"-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -92,7 +93,7 @@
             android:layout_height="wrap_content"
             android:minWidth="150dp"
             android:gravity="center"
-            android:inputType="date"
+            android:inputType="text"
             android:id="@+id/edit_fim"
             android:textSize="20sp"
             android:hint="dd-MM-yyyy" />
@@ -113,9 +114,23 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="150dp"
+            android:minWidth="130dp"
             android:gravity="center"
             android:id="@+id/edit_preco"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/duracao"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:inputType="number"
+            android:gravity="center"
+            android:id="@+id/edit_duracao"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -129,28 +144,30 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/duracao"
-            android:textSize="20sp" />
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="100dp"
-            android:gravity="center"
-            android:id="@+id/edit_duracao"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/edicao"
             android:layout_marginStart="10dp"
             android:textSize="20sp" />
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="150dp"
+            android:minWidth="130dp"
             android:gravity="center"
             android:id="@+id/edit_edicao"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imagem ID:"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:inputType="number"
+            android:gravity="center"
+            android:id="@+id/edit_imagemid"
             android:textSize="20sp" />
 
     </LinearLayout>

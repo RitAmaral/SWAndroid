@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.tp_mob_anaritaamaral.R
 import com.example.tp_mob_anaritaamaral.data.DBHelper
 import com.example.tp_mob_anaritaamaral.databinding.ActivityAddCursoBinding
 import java.text.SimpleDateFormat
@@ -21,6 +22,7 @@ class AddCursoActivity : AppCompatActivity() {
 
         val db = DBHelper(this)
 
+        //ler os valores e registar curso
         binding.buttonAdicionar.setOnClickListener {
             val nome = binding.editNome.text.toString()
             val local = binding.editLocal.text.toString()
@@ -29,26 +31,28 @@ class AddCursoActivity : AppCompatActivity() {
             val preco = binding.editPreco.text.toString()
             val duracao = binding.editDuracao.text.toString().toInt()
             val edicao = binding.editEdicao.text.toString()
+            val imagemID = binding.editImagemid.text.toString().toInt()
 
-            val formatoData = SimpleDateFormat("dd-MM-yyyy")
-            val dataInicial: Date? = formatoData.parse(inicio)
-            val dataFinal: Date? = formatoData.parse(fim)
+            //val formatoData = SimpleDateFormat("dd-MM-yyyy")
+            //val dataInicial: Date? = formatoData.parse(inicio)
+            //val dataFinal: Date? = formatoData.parse(fim)
 
-            if (nome.isNotEmpty() && local.isNotEmpty() && dataInicial != null && dataFinal != null
-                && preco.isNotEmpty() && duracao != null && edicao.isNotEmpty()
-            ) {
+            if (nome.isNotEmpty() && local.isNotEmpty() && inicio.isNotEmpty() && fim.isNotEmpty()
+                && preco.isNotEmpty() && duracao != null && edicao.isNotEmpty() && imagemID != null)
+            {
                 val res = db.insertCurso(
                     nome,
                     local,
-                    dataInicial,
-                    dataFinal,
+                    inicio,
+                    fim,
                     preco,
                     duracao.toInt(),
-                    edicao
+                    edicao,
+                    imagemID.toInt()
                 )
 
                 if (res > 0) {
-                    Toast.makeText(applicationContext, "Curso Adicionado", Toast.LENGTH_SHORT)
+                    Toast.makeText(applicationContext, getString(R.string.curso_adicionado), Toast.LENGTH_SHORT)
                         .show()
                     setResult(1, intent)
                     finish()
@@ -56,7 +60,7 @@ class AddCursoActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(
                         applicationContext,
-                        "Erro: Curso não adicionado",
+                        getString(R.string.erro_curso_nao_adicionado),
                         Toast.LENGTH_SHORT
                     ).show()
                 }

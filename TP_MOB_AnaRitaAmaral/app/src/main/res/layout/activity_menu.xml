@@ -40,7 +40,7 @@
             android:textSize="20sp"
             android:layout_marginHorizontal="10dp"
             android:layout_height="wrap_content"
-            android:text="Cursos" />
+            android:text="@string/cursos" />
         <Button
             android:id="@+id/button_sobre"
             android:layout_width="140dp"

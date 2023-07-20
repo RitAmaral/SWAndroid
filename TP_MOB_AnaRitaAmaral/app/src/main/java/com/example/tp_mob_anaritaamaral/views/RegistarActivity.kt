@@ -3,6 +3,7 @@ package com.example.tp_mob_anaritaamaral.views
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.tp_mob_anaritaamaral.R
 import com.example.tp_mob_anaritaamaral.data.DBHelper
 import com.example.tp_mob_anaritaamaral.adapter.UtilizadorListAdapter
 import com.example.tp_mob_anaritaamaral.databinding.ActivityRegistarBinding
@@ -37,13 +38,13 @@ class RegistarActivity : AppCompatActivity() {
                 finish() //vai para o MainActivity e leva os "dados" consigo
             }
             else if (password != confPassword) {
-                Toast.makeText(applicationContext, "As Passwords não correspondem! Tente novamente.", Toast.LENGTH_SHORT)
+                Toast.makeText(applicationContext, getString(R.string.as_passwords_nao_correspondem_tente_novamente), Toast.LENGTH_SHORT)
                     .show()
                 binding.editUser.setText("") //limpa os campos
                 binding.editPass.setText("")
                 binding.editConfpass.setText("")
             } else {
-                Toast.makeText(this, "O campo de username não pode estar vazio.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.o_campo_de_username_nao_pode_estar_vazio), Toast.LENGTH_SHORT).show()
             }
         }
     }

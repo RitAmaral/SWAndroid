@@ -27,21 +27,21 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
     val sqlCursos = arrayOf(
         "CREATE TABLE cursos (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, " +
                 "local TEXT, dataInicial TEXT, dataFinal TEXT, preco REAL," +
-                "duracao INTEGER, edicao TEXT);",
-        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Software Developer', 'Porto', '02-10-2023', '11-06-2024', 0, 1000, '4ªedição');",
-        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Software Developer', 'Lisboa', '04-10-2023', '28-06-2024', 0, 1000, '2ªedição');",
-        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Data Analyst', 'Lisboa', '11-10-2023', '28-06-2024', 0, 1050, '1ªedição');",
-        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Data Analyst', 'Porto', '16-10-2023', '05-07-2024', 0, 1050, '3ªedição');",
-        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Front-End Developer', 'Lisboa', '18-10-2023', '26-06-2024', 0, 1000, '1ªedição');",
-        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Network & Cyber Security Administrator', 'Porto', '06-11-2023', '04-07-2024', 0, 950, '3ªedição');",
-        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao) VALUES " +
-                "('Network & Cyber Security Administrator', 'Lisboa', '08-11-2023', '05-07-2024', 0, 950, '2ªedição');"
+                "duracao INTEGER, edicao TEXT, imagemID INTEGER);",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
+                "('Software Developer', 'Porto', '02-10-2023', '11-06-2024', 0, 1000, '4ªedição', 1);",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
+                "('Software Developer', 'Lisboa', '04-10-2023', '28-06-2024', 0, 1000, '2ªedição', 2);",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
+                "('Data Analyst', 'Lisboa', '11-10-2023', '28-06-2024', 0, 1050, '1ªedição', 3);",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
+                "('Data Analyst', 'Porto', '16-10-2023', '05-07-2024', 0, 1050, '3ªedição', 4);",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
+                "('Front-End Developer', 'Lisboa', '18-10-2023', '26-06-2024', 0, 1000, '1ªedição', 5);",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
+                "('Network & Cyber Security Administrator', 'Porto', '06-11-2023', '04-07-2024', 0, 950, '3ªedição', 6);",
+        "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
+                "('Network & Cyber Security Administrator', 'Lisboa', '08-11-2023', '05-07-2024', 0, 950, '2ªedição', 7);"
     ) //real = float
 
 
@@ -75,20 +75,25 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
 
     //Inserir curso:
     fun insertCurso(nome: String, local: String,
-                    dataInicial: Date, dataFinal: Date, preco: String,
-                    duracao: Int, edicao: String) : Long {
+                    dataInicial: String, dataFinal: String, preco: String,
+                    duracao: Int, edicao: String, imagemID: Int) : Long {
         val db = this.writableDatabase //ligação à base de dados
         val contentValues = ContentValues()
         contentValues.put("nome", nome)
         contentValues.put("local", local)
-        contentValues.put("dataInicial", SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(dataInicial))
-        contentValues.put("dataFinal", SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(dataFinal))
+        contentValues.put("dataInicial", dataInicial)
+        contentValues.put("dataFinal", dataFinal)
         contentValues.put("preco", preco)
         contentValues.put("duracao", duracao)
         contentValues.put("edicao", edicao)
+        contentValues.put("imagemID", imagemID)
         val res = db.insert("cursos", null, contentValues) //inserir na table cursos os contentValues
         db.close() //para fechar a ligação
         return res
+
+        //dataFinal: Date
+        //contentValues.put("dataInicial", SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(dataInicial))
+        //contentValues.put("dataFinal", SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(dataFinal))
     }
 
     //Atualizar Utilizador -- isto não precisa/vai ser usado
@@ -104,17 +109,18 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
 
     //Atualizar Curso
     fun updateCurso(id: Int, nome: String, local: String,
-                    dataInicial: Date, dataFinal: Date, preco: Double,
-                    duracao: Int, edicao: String) : Int {
+                    dataInicial: String, dataFinal: String, preco: Double,
+                    duracao: Int, edicao: String, imagemID: Int) : Int {
         val db = this.writableDatabase
         val contentValues = ContentValues()
         contentValues.put("nome", nome)
         contentValues.put("local", local)
-        contentValues.put("dataInicial", SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(dataInicial))
-        contentValues.put("dataFinal", SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(dataFinal))
+        contentValues.put("dataInicial", dataInicial)
+        contentValues.put("dataFinal", dataFinal)
         contentValues.put("preco", preco)
         contentValues.put("duracao", duracao)
         contentValues.put("edicao", edicao)
+        contentValues.put("imagemID", imagemID)
         val res = db.update("cursos", contentValues, "id=?", arrayOf(id.toString()))
         db.close() //para fechar a ligação
         return res
@@ -213,23 +219,25 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
             val precoIndex = cursor.getColumnIndex("preco")
             val duracaoIndex = cursor.getColumnIndex("duracao")
             val edicaoIndex = cursor.getColumnIndex("edicao")
+            val imagemIDIndex = cursor.getColumnIndex("imagemID")
 
             //carrego dados de id, nome, local, ... para varáveis locais
             val id = cursor.getInt(idIndex)
             val nome = cursor.getString(nomeIndex)
             val local = cursor.getString(localIndex)
-            val dataInicial1 = cursor.getString(dataInicialIndex)
-            val dataFinal1 = cursor.getString(dataFinalIndex)
+            val dataInicial = cursor.getString(dataInicialIndex) //dataInicial1
+            val dataFinal = cursor.getString(dataFinalIndex)
             val preco = cursor.getString(precoIndex)
             val duracao = cursor.getInt(duracaoIndex)
             val edicao = cursor.getString(edicaoIndex)
+            val imagemID = cursor.getInt(imagemIDIndex)
 
             //acrescentar para as datas não darem erro
-            val formatoData = SimpleDateFormat("dd-MM-yyyy")
-            val dataInicial = formatoData.parse(dataInicial1)
-            val dataFinal = formatoData.parse(dataFinal1)
+            //val formatoData = SimpleDateFormat("dd-MM-yyyy")
+            //val dataInicial = formatoData.parse(dataInicial1)
+            //val dataFinal = formatoData.parse(dataFinal1)
 
-            curso = Curso(id, nome, local, dataInicial, dataFinal, preco, duracao, edicao)
+            curso = Curso(id, nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID)
         }
         db.close()
         return curso
@@ -273,23 +281,25 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
             val precoIndex = cursor.getColumnIndex("preco")
             val duracaoIndex = cursor.getColumnIndex("duracao")
             val edicaoIndex = cursor.getColumnIndex("edicao")
+            val imagemIDIndex = cursor.getColumnIndex("imagemID")
 
             do {
                 val id = cursor.getInt(idIndex)
                 val nome = cursor.getString(nomeIndex)
                 val local = cursor.getString(localIndex)
-                val dataInicial1 = cursor.getString(dataInicialIndex)
-                val dataFinal1 = cursor.getString(dataFinalIndex)
+                val dataInicial = cursor.getString(dataInicialIndex)
+                val dataFinal = cursor.getString(dataFinalIndex)
                 val preco = cursor.getString(precoIndex)
                 val duracao = cursor.getInt(duracaoIndex)
                 val edicao = cursor.getString(edicaoIndex)
+                val imagemID = cursor.getInt(imagemIDIndex)
 
                 //acrescentar para as datas não darem erro
-                val formatoData = SimpleDateFormat("dd-MM-yyyy")
-                val dataInicial = formatoData.parse(dataInicial1)
-                val dataFinal = formatoData.parse(dataFinal1)
+                //val formatoData = SimpleDateFormat("dd-MM-yyyy")
+                //val dataInicial = formatoData.parse(dataInicial1)
+                //val dataFinal = formatoData.parse(dataFinal1)
 
-                listaCursos.add(Curso(id, nome, local, dataInicial, dataFinal, preco, duracao, edicao))
+                listaCursos.add(Curso(id, nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID))
             } while (cursor.moveToNext())
         }
         db.close()
