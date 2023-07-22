@@ -28,4 +28,6 @@
     <string name="as_passwords_nao_correspondem_tente_novamente">As Passwords não correspondem! Tente novamente.</string>
     <string name="o_campo_de_username_nao_pode_estar_vazio">O campo de username não pode estar vazio.</string>
     <string name="login_errado_tente_novamente">Login errado! Tente novamente.</string>
+    <string name="curso_eliminado">Curso eliminado</string>
+    <string name="curso_nao_foi_eliminado">Curso não foi eliminado</string>
 </resources>

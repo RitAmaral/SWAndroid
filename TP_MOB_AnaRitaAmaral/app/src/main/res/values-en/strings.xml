@@ -25,4 +25,6 @@
     <string name="as_passwords_nao_correspondem_tente_novamente">Passwords do not match! Try again.</string>
     <string name="o_campo_de_username_nao_pode_estar_vazio">The username field cannot be empty.</string>
     <string name="login_errado_tente_novamente">Login incorrect! Try again.</string>
+    <string name="curso_eliminado">Course eliminated</string>
+    <string name="curso_nao_foi_eliminado">Course not eliminated</string>
 </resources>

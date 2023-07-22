@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:padding="10dp"
     android:background="@color/azul_fundo"
     tools:context=".views.AddCursoActivity">
 
@@ -13,11 +14,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/adicionar_curso"
-        android:textSize="40sp"
-        android:layout_marginVertical="20dp"
+        android:textSize="30sp"
         android:textColor="@color/rosa"
         android:textStyle="bold"
         android:fontFamily="casual" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:id="@+id/imagem"
+        android:layout_marginVertical="10dp"
+        android:src="@drawable/iconcesae"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -114,8 +121,9 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="130dp"
+            android:minWidth="100dp"
             android:gravity="center"
+            android:inputType="number"
             android:id="@+id/edit_preco"
             android:textSize="20sp" />
         <TextView
@@ -127,7 +135,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="80dp"
+            android:minWidth="100dp"
             android:inputType="number"
             android:gravity="center"
             android:id="@+id/edit_duracao"
@@ -155,7 +163,7 @@
             android:id="@+id/edit_edicao"
             android:textSize="20sp" />
 
-        <TextView
+        <!-- <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Imagem ID:"
@@ -168,7 +176,7 @@
             android:inputType="number"
             android:gravity="center"
             android:id="@+id/edit_imagemid"
-            android:textSize="20sp" />
+            android:textSize="20sp" /> -->
 
     </LinearLayout>
 

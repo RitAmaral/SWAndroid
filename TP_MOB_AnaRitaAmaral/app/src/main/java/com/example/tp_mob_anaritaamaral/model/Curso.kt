@@ -7,7 +7,7 @@ import java.util.Date
 
 
 class Curso (var id: Int = 0, var nome: String = "", var local: String = "",
-             var dataInicial: String = "", var dataFinal: String = "", var preco: String = "",
+             var dataInicial: String = "", var dataFinal: String = "", var preco: Int = 0,
              var duracao: Int = 0, var edicao: String = "", var imagemID: Int = 0) {
 
     //var dataInicial: Date = Date() //${formatarData(dataInicial)}

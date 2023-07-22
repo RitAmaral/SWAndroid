@@ -26,22 +26,22 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
     //tabela cursos
     val sqlCursos = arrayOf(
         "CREATE TABLE cursos (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, " +
-                "local TEXT, dataInicial TEXT, dataFinal TEXT, preco REAL," +
+                "local TEXT, dataInicial TEXT, dataFinal TEXT, preco INTEGER," +
                 "duracao INTEGER, edicao TEXT, imagemID INTEGER);",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Software Developer', 'Porto', '02-10-2023', '11-06-2024', 0, 1000, '4ªedição', 1);",
+                "('Software Developer', 'Porto', '02-10-2023', '11-06-2024', 0, 1000, '4ªedição', -1);",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Software Developer', 'Lisboa', '04-10-2023', '28-06-2024', 0, 1000, '2ªedição', 2);",
+                "('Software Developer', 'Lisboa', '04-10-2023', '28-06-2024', 0, 1000, '2ªedição', -1);",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Data Analyst', 'Lisboa', '11-10-2023', '28-06-2024', 0, 1050, '1ªedição', 3);",
+                "('Data Analyst', 'Lisboa', '11-10-2023', '28-06-2024', 0, 1050, '1ªedição', -1);",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Data Analyst', 'Porto', '16-10-2023', '05-07-2024', 0, 1050, '3ªedição', 4);",
+                "('Data Analyst', 'Porto', '16-10-2023', '05-07-2024', 0, 1050, '3ªedição', -1);",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Front-End Developer', 'Lisboa', '18-10-2023', '26-06-2024', 0, 1000, '1ªedição', 5);",
+                "('Front-End Developer', 'Lisboa', '18-10-2023', '26-06-2024', 0, 1000, '1ªedição', -1);",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Network & Cyber Security Administrator', 'Porto', '06-11-2023', '04-07-2024', 0, 950, '3ªedição', 6);",
+                "('Network & Cyber Security Administrator', 'Porto', '06-11-2023', '04-07-2024', 0, 950, '3ªedição', -1);",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Network & Cyber Security Administrator', 'Lisboa', '08-11-2023', '05-07-2024', 0, 950, '2ªedição', 7);"
+                "('Network & Cyber Security Administrator', 'Lisboa', '08-11-2023', '05-07-2024', 0, 950, '2ªedição', -1);"
     ) //real = float
 
 
@@ -75,7 +75,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
 
     //Inserir curso:
     fun insertCurso(nome: String, local: String,
-                    dataInicial: String, dataFinal: String, preco: String,
+                    dataInicial: String, dataFinal: String, preco: Int,
                     duracao: Int, edicao: String, imagemID: Int) : Long {
         val db = this.writableDatabase //ligação à base de dados
         val contentValues = ContentValues()
@@ -109,7 +109,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
 
     //Atualizar Curso
     fun updateCurso(id: Int, nome: String, local: String,
-                    dataInicial: String, dataFinal: String, preco: Double,
+                    dataInicial: String, dataFinal: String, preco: Int,
                     duracao: Int, edicao: String, imagemID: Int) : Int {
         val db = this.writableDatabase
         val contentValues = ContentValues()
@@ -227,7 +227,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
             val local = cursor.getString(localIndex)
             val dataInicial = cursor.getString(dataInicialIndex) //dataInicial1
             val dataFinal = cursor.getString(dataFinalIndex)
-            val preco = cursor.getString(precoIndex)
+            val preco = cursor.getInt(precoIndex)
             val duracao = cursor.getInt(duracaoIndex)
             val edicao = cursor.getString(edicaoIndex)
             val imagemID = cursor.getInt(imagemIDIndex)
@@ -289,7 +289,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
                 val local = cursor.getString(localIndex)
                 val dataInicial = cursor.getString(dataInicialIndex)
                 val dataFinal = cursor.getString(dataFinalIndex)
-                val preco = cursor.getString(precoIndex)
+                val preco = cursor.getInt(precoIndex)
                 val duracao = cursor.getInt(duracaoIndex)
                 val edicao = cursor.getString(edicaoIndex)
                 val imagemID = cursor.getInt(imagemIDIndex)

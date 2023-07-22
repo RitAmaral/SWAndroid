@@ -6,25 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/azul_fundo"
     tools:context=".views.InfoCursoActivity">
-
-    <TextView
+    
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/text_imagem"
-        android:hint="@string/id_imagem"
-        android:gravity="center"
+        android:layout_height="160dp"
+        android:id="@+id/imagem_cesae"
         android:layout_marginVertical="10dp"
-        android:textSize="20sp"/>
+        android:src="@drawable/iconcesae"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/text_nome"
-        android:hint="@string/nome"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
-        android:textSize="20sp"/>
+        android:gravity="center"
+        android:hint="@string/nome"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
@@ -91,19 +91,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
+            android:textSize="16sp"
+            android:backgroundTint="#AB73AF"
             android:text="@string/editar" />
         <Button
             android:id="@+id/botao_eliminar"
             android:layout_width="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:backgroundTint="#5E1F6A"
             android:text="@string/eliminar" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/text_res"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
