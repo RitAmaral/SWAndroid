@@ -14,6 +14,7 @@ import com.example.tp_mob_anaritaamaral.model.Curso
 class InfoCursoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInfoCursoBinding
+    private lateinit var db: DBHelper
     private lateinit var curso: Curso
     private lateinit var launcher: ActivityResultLauncher<Intent>
     private var imageid: Int? = -1
@@ -24,38 +25,31 @@ class InfoCursoActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //ligação à base de dados
-        val db = DBHelper(this)
+        db = DBHelper(this)
         val i = intent
         val id = i.extras?.getInt("id")
 
         //curso = db.selectCursoByIDObjeto(i.getIntExtra("id", 0))
+        //curso = id?.let { db.selectCursoByIDObjeto(it) }!!
 
-        curso = id?.let { db.selectCursoByIDObjeto(it) }!!
 
-        binding.textNome.setText(curso.nome)
-        binding.textLocal.setText(curso.local)
-        binding.textInicio.setText(curso.dataInicial)
-        binding.textFim.setText(curso.dataFinal)
-        binding.textPreco.setText(curso.preco.toString().toInt())
-        binding.textDuracao.setText(curso.duracao.toString().toInt())
-        binding.textEdicao.setText(curso.edicao)
-        if (curso.imagemID > 0) {
-            binding.imagemCesae.setImageDrawable(resources.getDrawable(curso.imagemID))
+        if (id != null) {
+            curso = db.selectCursoByIDObjeto(id)
+            buscar()
         } else {
-            binding.imagemCesae.setImageResource(R.drawable.iconcesae) //imagem default
+            finish()
         }
-
 
         binding.botaoEditar.setOnClickListener {
             val res = db.updateCurso(
                 id = curso.id,
-                nome = binding.textNome.text.toString(),
-                local = binding.textLocal.text.toString(),
-                dataInicial = binding.textInicio.text.toString(),
-                dataFinal = binding.textFim.text.toString(),
-                preco = binding.textPreco.text.toString().toInt(),
-                duracao = binding.textDuracao.text.toString().toInt(),
-                edicao = binding.textEdicao.text.toString(),
+                nome = binding.editNome.text.toString(),
+                local = binding.editLocal.text.toString(),
+                dataInicial = binding.editInicio.text.toString(),
+                dataFinal = binding.editFim.text.toString(),
+                preco = binding.editPreco.text.toString().toInt(),
+                duracao = binding.editDuracao.text.toString().toInt(),
+                edicao = binding.editEdicao.text.toString(),
                 imagemID = curso.imagemID
             )
 
@@ -105,6 +99,7 @@ class InfoCursoActivity : AppCompatActivity() {
         binding.imagemCesae.setOnClickListener {
             launcher.launch(Intent(applicationContext, ImagemSelecionarActivity::class.java))
         }
+        
         launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.data != null && it.resultCode == 1) {
                 imageid = it.data?.extras?.getInt("id")
@@ -116,4 +111,18 @@ class InfoCursoActivity : AppCompatActivity() {
         }
 
     }
+    private fun buscar() {
+            binding.editNome.setText(curso.nome)
+            binding.editLocal.setText(curso.local)
+            binding.editInicio.setText(curso.dataInicial)
+            binding.editFim.setText(curso.dataFinal)
+            binding.editPreco.setText(curso.preco.toString().toInt())
+            binding.editDuracao.setText(curso.duracao.toString().toInt())
+            binding.editEdicao.setText(curso.edicao)
+            if (curso.imagemID > 0) {
+                binding.imagemCesae.setImageDrawable(resources.getDrawable(curso.imagemID))
+            } else {
+                binding.imagemCesae.setImageResource(R.drawable.iconcesae) //imagem default
+            }
+        }
 }

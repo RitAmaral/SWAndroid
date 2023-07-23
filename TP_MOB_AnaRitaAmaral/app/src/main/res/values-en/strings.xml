@@ -27,4 +27,5 @@
     <string name="login_errado_tente_novamente">Login incorrect! Try again.</string>
     <string name="curso_eliminado">Course eliminated</string>
     <string name="curso_nao_foi_eliminado">Course not eliminated</string>
+    <string name="ligue_o_som">Turn sound on</string>
 </resources>

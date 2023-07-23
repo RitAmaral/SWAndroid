@@ -34,21 +34,6 @@
             android:textSize="16sp"
             android:backgroundTint="#009DE2" />
 
-        <Button
-            android:id="@+id/button_editar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:backgroundTint="#AB73AF"
-            android:text="@string/editar"
-            android:textSize="16sp" />
-        <Button
-            android:id="@+id/button_eliminar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/eliminar"
-            android:textSize="16sp"
-            android:backgroundTint="#5E1F6A" />
     </LinearLayout>
 
 

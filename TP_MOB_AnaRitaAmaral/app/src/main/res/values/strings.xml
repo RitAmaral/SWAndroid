@@ -30,4 +30,5 @@
     <string name="login_errado_tente_novamente">Login errado! Tente novamente.</string>
     <string name="curso_eliminado">Curso eliminado</string>
     <string name="curso_nao_foi_eliminado">Curso não foi eliminado</string>
+    <string name="ligue_o_som">Ligue o som</string>
 </resources>

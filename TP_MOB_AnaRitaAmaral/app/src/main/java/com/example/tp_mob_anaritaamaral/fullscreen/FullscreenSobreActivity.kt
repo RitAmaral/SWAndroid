@@ -2,6 +2,7 @@ package com.example.tp_mob_anaritaamaral.fullscreen
 
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
+import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -12,6 +13,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.example.tp_mob_anaritaamaral.R
 import com.example.tp_mob_anaritaamaral.databinding.ActivityFullscreenSobreBinding
 
 /**
@@ -38,5 +40,7 @@ class FullscreenSobreActivity : AppCompatActivity() {
         }
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) //manter sempre o ecrã ligado
 
+        val mediaPlayer = MediaPlayer.create(this, R.raw.party)
+        mediaPlayer.start()
     }
 }

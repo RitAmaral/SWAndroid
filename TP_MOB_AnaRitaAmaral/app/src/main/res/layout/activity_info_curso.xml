@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:padding="10dp"
     android:background="@color/azul_fundo"
     tools:context=".views.InfoCursoActivity">
     
@@ -17,67 +18,77 @@
         android:src="@drawable/iconcesae"/>
 
     <TextView
-        android:id="@+id/text_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp"
+        android:id="@+id/text_id"
+        android:layout_marginVertical="5dp"
+        android:gravity="center"
+        android:hint="ID"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_nome"
+        android:layout_marginVertical="5dp"
         android:gravity="center"
         android:hint="@string/nome"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text_local"
+        android:id="@+id/edit_local"
         android:hint="@string/local"
         android:gravity="center"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="5dp"
         android:textSize="20sp"/>
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text_inicio"
+        android:id="@+id/edit_inicio"
         android:hint="@string/inicio"
         android:gravity="center"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="5dp"
         android:textSize="20sp"/>
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text_fim"
+        android:id="@+id/edit_fim"
         android:hint="@string/fim"
         android:gravity="center"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="5dp"
         android:textSize="20sp"/>
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text_preco"
+        android:id="@+id/edit_preco"
         android:hint="@string/preco"
         android:gravity="center"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="5dp"
         android:textSize="20sp"/>
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text_duracao"
+        android:id="@+id/edit_duracao"
         android:hint="@string/duracao"
         android:gravity="center"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="5dp"
         android:textSize="20sp"/>
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text_edicao"
+        android:id="@+id/edit_edicao"
         android:hint="@string/edicao"
         android:gravity="center"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="5dp"
         android:textSize="20sp"/>
 
     <LinearLayout

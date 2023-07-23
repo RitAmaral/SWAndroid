@@ -43,13 +43,6 @@ class CursosActivity : AppCompatActivity() {
             launcher.launch(i)
         }
 
-        binding.buttonEditar.setOnClickListener {
-            //editar na info activity, quando carregar no curso, não aqui
-        }
-
-        binding.buttonEliminar.setOnClickListener {
-            //eliminar na info activity, não aqui
-        }
 
         launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.data != null && it.resultCode == 1) {

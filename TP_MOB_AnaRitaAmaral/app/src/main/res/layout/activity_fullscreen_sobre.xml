@@ -13,12 +13,21 @@
         android:layout_marginVertical="30dp"
         android:gravity="center"
         android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="App criada por: \nAna Rita Amaral"
+            android:textSize="40sp"/>
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="App criada por: \nAna Rita Amaral"
-        android:textSize="40sp"/>
-    </LinearLayout>
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:text="@string/ligue_o_som" />
 
 </FrameLayout>
