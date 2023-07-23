@@ -31,4 +31,7 @@
     <string name="curso_eliminado">Curso eliminado</string>
     <string name="curso_nao_foi_eliminado">Curso não foi eliminado</string>
     <string name="ligue_o_som">Ligue o som</string>
+    <string name="login_correto_bem_vindo">Login correto! Bem-vindo!</string>
+    <string name="curso_editado_com_sucesso">Curso editado com sucesso</string>
+    <string name="curso_nao_editado">Curso não editado</string>
 </resources>

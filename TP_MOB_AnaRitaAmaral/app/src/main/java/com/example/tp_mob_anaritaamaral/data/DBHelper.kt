@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.tp_mob_anaritaamaral.R
 import com.example.tp_mob_anaritaamaral.model.Curso
 import com.example.tp_mob_anaritaamaral.model.Utilizador
 import java.text.SimpleDateFormat
@@ -12,7 +13,8 @@ import java.util.ArrayList
 import java.util.Date
 import java.util.Locale
 
-class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1) { //"nome da base de dados"
+class DBHelper(context: Context) :
+    SQLiteOpenHelper(context, "dbusers", null, 1) { //"nome da base de dados"
     //implementar membros (oncreate e onupgrade)
 
     //tabela utilizadores
@@ -29,19 +31,19 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
                 "local TEXT, dataInicial TEXT, dataFinal TEXT, preco INTEGER," +
                 "duracao INTEGER, edicao TEXT, imagemID INTEGER);",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Software Developer', 'Porto', '02-10-2023', '11-06-2024', 0, 1000, '4ªedição', 1);",
+                "('Software Developer', 'Porto', '02-10-2023', '11-06-2024', 0, 1000, '4ªedição', " + R.drawable.swp + ");",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Software Developer', 'Lisboa', '04-10-2023', '28-06-2024', 0, 1000, '2ªedição', 2);",
+                "('Software Developer', 'Lisboa', '04-10-2023', '28-06-2024', 0, 1000, '2ªedição', " + R.drawable.swl + ");",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Data Analyst', 'Lisboa', '11-10-2023', '28-06-2024', 0, 1050, '1ªedição', 3);",
+                "('Data Analyst', 'Lisboa', '11-10-2023', '28-06-2024', 0, 1050, '1ªedição', " + R.drawable.dal + ");",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Data Analyst', 'Porto', '16-10-2023', '05-07-2024', 0, 1050, '3ªedição', 4);",
+                "('Data Analyst', 'Porto', '16-10-2023', '05-07-2024', 0, 1050, '3ªedição', " + R.drawable.dap + ");",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Front-End Developer', 'Lisboa', '18-10-2023', '26-06-2024', 0, 1000, '1ªedição', 5);",
+                "('Front-End Developer', 'Lisboa', '18-10-2023', '26-06-2024', 0, 1000, '1ªedição', " + R.drawable.fedl + ");",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Network & Cyber Security Administrator', 'Porto', '06-11-2023', '04-07-2024', 0, 950, '3ªedição', 6);",
+                "('Network & Cyber Security Administrator', 'Porto', '06-11-2023', '04-07-2024', 0, 950, '3ªedição', " + R.drawable.csp + ");",
         "INSERT INTO cursos (nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID) VALUES " +
-                "('Network & Cyber Security Administrator', 'Lisboa', '08-11-2023', '05-07-2024', 0, 950, '2ªedição', 7);"
+                "('Network & Cyber Security Administrator', 'Lisboa', '08-11-2023', '05-07-2024', 0, 950, '2ªedição', " + R.drawable.csl + ");"
     ) //real = float
 
 
@@ -64,19 +66,27 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
 
     //Inserir utilizador:
     fun insertUtilizador(username: String, password: String): Long {
-        val db = this.writableDatabase //ligação à base de dados, e vão ser feitas alterações por isso colocar writableDatabase
-        val contentValues = ContentValues() //vou colocar os elementos que quero inserir no meu insert (funciona como o intent)
+        val db =
+            this.writableDatabase //ligação à base de dados, e vão ser feitas alterações por isso colocar writableDatabase
+        val contentValues =
+            ContentValues() //vou colocar os elementos que quero inserir no meu insert (funciona como o intent)
         contentValues.put("username", username) //"nome da coluna", valor que estou a passar
         contentValues.put("password", password)
-        val res = db.insert("utilizador", null, contentValues) //inserir na table utilizador os contentValues
+        val res = db.insert(
+            "utilizador",
+            null,
+            contentValues
+        ) //inserir na table utilizador os contentValues
         db.close() //para fechar a ligação
         return res
     }
 
     //Inserir curso:
-    fun insertCurso(nome: String, local: String,
-                    dataInicial: String, dataFinal: String, preco: Int,
-                    duracao: Int, edicao: String, imagemID: Int) : Long {
+    fun insertCurso(
+        nome: String, local: String,
+        dataInicial: String, dataFinal: String, preco: Int,
+        duracao: Int, edicao: String, imagemID: Int
+    ): Long {
         val db = this.writableDatabase //ligação à base de dados
         val contentValues = ContentValues()
         contentValues.put("nome", nome)
@@ -87,7 +97,8 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
         contentValues.put("duracao", duracao)
         contentValues.put("edicao", edicao)
         contentValues.put("imagemID", imagemID)
-        val res = db.insert("cursos", null, contentValues) //inserir na table cursos os contentValues
+        val res =
+            db.insert("cursos", null, contentValues) //inserir na table cursos os contentValues
         db.close() //para fechar a ligação
         return res
 
@@ -102,15 +113,17 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
         val contentValues = ContentValues()
         contentValues.put("username", username)
         contentValues.put("password", password)
-        val res = db.update("utilizador", contentValues,"id=?",arrayOf(id.toString()))
+        val res = db.update("utilizador", contentValues, "id=?", arrayOf(id.toString()))
         db.close() //para fechar a ligação
         return res
     }
 
     //Atualizar Curso
-    fun updateCurso(id: Int, nome: String, local: String,
-                    dataInicial: String, dataFinal: String, preco: Int,
-                    duracao: Int, edicao: String, imagemID: Int) : Int {
+    fun updateCurso(
+        id: Int, nome: String, local: String,
+        dataInicial: String, dataFinal: String, preco: Int,
+        duracao: Int, edicao: String, imagemID: Int
+    ): Int {
         val db = this.writableDatabase
         val contentValues = ContentValues()
         contentValues.put("nome", nome)
@@ -129,13 +142,17 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
     //Remover Utilizador -- isto não precisa/vai ser usado
     fun deleteUtilizador(id: Int): Int { //colocar aqui o Int que apareceu quando passamos em cima do delete
         val db = this.writableDatabase
-        val res = db.delete("utilizador","id=?",arrayOf(id.toString())) //se tiver a dar erro, passar em cima do delete, e ver que tem Int, logo colocar em cima ^
+        val res = db.delete(
+            "utilizador",
+            "id=?",
+            arrayOf(id.toString())
+        ) //se tiver a dar erro, passar em cima do delete, e ver que tem Int, logo colocar em cima ^
         db.close() //para fechar a ligação
         return res
     }
 
     //Remover Curso
-    fun deleteCurso(id: Int) : Int {
+    fun deleteCurso(id: Int): Int {
         val db = this.writableDatabase
         val res = db.delete("cursos", "id=?", arrayOf(id.toString()))
         db.close()
@@ -144,7 +161,8 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
 
     //Selecionar todos os Utilizadores
     fun selectAllUtilizadorCursor(): Cursor {
-        val db = this.readableDatabase //aqui já não fazemos alterações na base de dados, por isso colocamos readableDatabase
+        val db =
+            this.readableDatabase //aqui já não fazemos alterações na base de dados, por isso colocamos readableDatabase
         val cursor = db.rawQuery("SELECT * FROM utilizador", null)
         db.close()
         return cursor
@@ -257,7 +275,8 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
 
 
     fun selectAllUtilizadorLista(): ArrayList<Utilizador> {
-        val db = this.readableDatabase //aqui já não fazemos alterações na base de dados, por isso colocamos readableDatabase
+        val db =
+            this.readableDatabase //aqui já não fazemos alterações na base de dados, por isso colocamos readableDatabase
         val cursor = db.rawQuery("SELECT * FROM utilizador", null)
 
         val listaUtilizador: ArrayList<Utilizador> = ArrayList()
@@ -312,7 +331,19 @@ class DBHelper (context: Context) : SQLiteOpenHelper(context, "dbusers", null, 1
                 //val dataInicial = formatoData.parse(dataInicial1)
                 //val dataFinal = formatoData.parse(dataFinal1)
 
-                listaCursos.add(Curso(id, nome, local, dataInicial, dataFinal, preco, duracao, edicao, imagemID))
+                listaCursos.add(
+                    Curso(
+                        id,
+                        nome,
+                        local,
+                        dataInicial,
+                        dataFinal,
+                        preco,
+                        duracao,
+                        edicao,
+                        imagemID
+                    )
+                )
             } while (cursor.moveToNext())
         }
         db.close()

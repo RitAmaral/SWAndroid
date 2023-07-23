@@ -28,4 +28,7 @@
     <string name="curso_eliminado">Course eliminated</string>
     <string name="curso_nao_foi_eliminado">Course not eliminated</string>
     <string name="ligue_o_som">Turn sound on</string>
+    <string name="login_correto_bem_vindo">Login correct! Welcome!</string>
+    <string name="curso_editado_com_sucesso">Course edited with sucess</string>
+    <string name="curso_nao_editado">Course not edited</string>
 </resources>

@@ -54,44 +54,33 @@ class InfoCursoActivity : AppCompatActivity() {
             )
 
             if (res > 0) {
-                Toast.makeText(applicationContext, "Curso editado com sucesso", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, getString(R.string.curso_editado_com_sucesso), Toast.LENGTH_SHORT)
+                    .show()
                 setResult(1, i)
                 finish()
             } else {
-                Toast.makeText(applicationContext, "Curso não editado", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, getString(R.string.curso_nao_editado), Toast.LENGTH_SHORT).show()
                 setResult(0, i)
                 finish()
             }
-            /*
-            val imagemID = binding.textImagem.text.toString().toInt()
-            val nome = binding.textNome.text.toString()
-            val local = binding.textLocal.text.toString()
-            val inicio = binding.textInicio.text.toString()
-            val fim = binding.textFim.text.toString()
-            val preco = binding.textPreco.text.toString().toDouble()
-            val duracao = binding.textDuracao.text.toString().toInt()
-            val edicao = binding.textEdicao.text.toString() */
 
-
-            /*
-            if (nome.isNotEmpty() && local.isNotEmpty() && inicio.isNotEmpty() && fim.isNotEmpty()
-                && preco.isNotEmpty() && duracao != null && edicao.isNotEmpty() && imagemID != null) {
-                val res = db.insertCurso(nome, local, inicio, fim, preco, duracao, edicao, imagemID)
-                if (res>0) {
-                    Toast.makeText(applicationContext, "Curso editado com sucesso", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(applicationContext, "Curso não editado", Toast.LENGTH_SHORT).show()
-                }
-            }*/
         }
         binding.botaoEliminar.setOnClickListener {
             val res = db.deleteCurso(curso.id)
             if (res > 0) {
-                Toast.makeText(applicationContext, getString(R.string.curso_eliminado), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    applicationContext,
+                    getString(R.string.curso_eliminado),
+                    Toast.LENGTH_SHORT
+                ).show()
                 setResult(1, i)
                 finish()
             } else {
-                Toast.makeText(applicationContext, getString(R.string.curso_nao_foi_eliminado), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    applicationContext,
+                    getString(R.string.curso_nao_foi_eliminado),
+                    Toast.LENGTH_SHORT
+                ).show()
                 setResult(0, i)
                 finish()
             }
@@ -99,7 +88,7 @@ class InfoCursoActivity : AppCompatActivity() {
         binding.imagemCesae.setOnClickListener {
             launcher.launch(Intent(applicationContext, ImagemSelecionarActivity::class.java))
         }
-        
+
         launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.data != null && it.resultCode == 1) {
                 imageid = it.data?.extras?.getInt("id")
@@ -111,18 +100,19 @@ class InfoCursoActivity : AppCompatActivity() {
         }
 
     }
+
     private fun buscar() {
-            binding.editNome.setText(curso.nome)
-            binding.editLocal.setText(curso.local)
-            binding.editInicio.setText(curso.dataInicial)
-            binding.editFim.setText(curso.dataFinal)
-            binding.editPreco.setText(curso.preco.toString().toInt())
-            binding.editDuracao.setText(curso.duracao.toString().toInt())
-            binding.editEdicao.setText(curso.edicao)
-            if (curso.imagemID > 0) {
-                binding.imagemCesae.setImageDrawable(resources.getDrawable(curso.imagemID))
-            } else {
-                binding.imagemCesae.setImageResource(R.drawable.iconcesae) //imagem default
-            }
+        binding.editNome.setText(curso.nome)
+        binding.editLocal.setText(curso.local)
+        binding.editInicio.setText(curso.dataInicial)
+        binding.editFim.setText(curso.dataFinal)
+        binding.editPreco.setText(curso.preco.toString())
+        binding.editDuracao.setText(curso.duracao.toString())
+        binding.editEdicao.setText(curso.edicao)
+        if (curso.imagemID > 0) {
+            binding.imagemCesae.setImageResource(curso.imagemID)
+        } else {
+            binding.imagemCesae.setImageResource(R.drawable.iconcesae) //imagem default
         }
+    }
 }

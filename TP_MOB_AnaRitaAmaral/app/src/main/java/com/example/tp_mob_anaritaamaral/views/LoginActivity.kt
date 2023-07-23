@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
             for (utilizador in listaUtilizadores) {
                 if (utilizador.username == username1 && utilizador.password == password1) {
                     loginValido = true
-                    Toast.makeText(applicationContext, "Login correto! Bem-vindo $username1!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, getString(R.string.login_correto_bem_vindo), Toast.LENGTH_SHORT).show()
                 }
             }
             if (loginValido) {
