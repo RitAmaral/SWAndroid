@@ -56,3 +56,11 @@
 - [09 Ex1](09_Ex1) - Aula 05/07/2023 - Exercício 1 - Shared Preferences: username e password guardados em ficheiro xml
 - [09 Ex2](09_Ex2) - Aula 06/07/2023 - Exercício 2 - Shared Preferences: bloco de notas
 - [09 Ex3](09_Ex3) - Aula 06/07/2023 - Exercício 3 - 3 audios - 3 botões
+- [10 RelativeLayout](10_RelativeLayout)
+- [11 CicloVidaActivity](11_CicloVidaActivity)
+- [12 AppRelogio](12_AppRelogio) - fullscreen, ecrã sempre ligado
+- [13 RecyclerView](13_RecyclerView)
+- [14 SQLite](14_SQLite) - base de dados
+- [16 ROOM](16_ROOM)
+- [TP MOB_AnaRitaAmaral](TP_MOB_AnaRitaAmaral) - trabalho final de Mobile
+
