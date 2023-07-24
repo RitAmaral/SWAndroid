@@ -15,7 +15,6 @@ class CursoListAdapter (val listaCursos: ArrayList<Curso>, val onClickListener: 
 
     class CursoViewHolder (ItemView: View) : RecyclerView.ViewHolder(ItemView) { //vai buscar a linha da recycler view:
         val textView: TextView = itemView.findViewById(R.id.text_nome) //text_nome -> row_curso_list
-        //val imagem: ImageView = itemView.findViewById(R.id.imagem_cesae)
     }
 
     class OnClickListener(val clickListener: (curso: Curso) -> Unit) {
@@ -35,12 +34,6 @@ class CursoListAdapter (val listaCursos: ArrayList<Curso>, val onClickListener: 
         val curso = listaCursos[position]
 
         holder.textView.setText("$curso")
-        /*
-        if (curso.imagemID > 0) {
-            holder.imagem.setImageResource(curso.imagemID)
-        } else {
-            holder.imagem.setImageResource(R.drawable.iconcesae)
-        }*/
 
         holder.itemView.setOnClickListener {
             onClickListener.onClick(curso)

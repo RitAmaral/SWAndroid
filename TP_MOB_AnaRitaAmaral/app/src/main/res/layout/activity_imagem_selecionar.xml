@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Seleciona a imagem do curso" />
+        android:text="@string/seleciona_a_imagem_do_curso" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:id="@+id/btn_remover_imagem"
-        android:text="Remover Imagem"
+        android:text="@string/remover_imagem"
         android:backgroundTint="#5E1F6A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

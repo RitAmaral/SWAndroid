@@ -31,4 +31,6 @@
     <string name="login_correto_bem_vindo">Login correct! Welcome!</string>
     <string name="curso_editado_com_sucesso">Course edited with sucess</string>
     <string name="curso_nao_editado">Course not edited</string>
+    <string name="seleciona_a_imagem_do_curso">Select the course image</string>
+    <string name="remover_imagem">Remove Image</string>
 </resources>

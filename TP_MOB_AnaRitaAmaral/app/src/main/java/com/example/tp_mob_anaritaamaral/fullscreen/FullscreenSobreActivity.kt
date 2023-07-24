@@ -27,7 +27,6 @@ class FullscreenSobreActivity : AppCompatActivity() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityFullscreenSobreBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -38,8 +37,11 @@ class FullscreenSobreActivity : AppCompatActivity() {
             window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
             //o else é para versoes antigas, abaixo de 30
         }
-        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) //manter sempre o ecrã ligado
 
+        //Manter sempre o ecrã ligado
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
+        //Audio player
         val mediaPlayer = MediaPlayer.create(this, R.raw.party)
         mediaPlayer.start()
     }
