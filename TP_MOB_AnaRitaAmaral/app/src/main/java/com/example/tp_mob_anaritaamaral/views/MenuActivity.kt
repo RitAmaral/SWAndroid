@@ -15,9 +15,12 @@ class MenuActivity : AppCompatActivity() {
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Ir para Cursos activity
         binding.buttonCursos.setOnClickListener {
             startActivity(Intent(this, CursosActivity::class.java))
         }
+
+        //Ir para Sobre activity
         binding.buttonSobre.setOnClickListener {
             startActivity(Intent(this, FullscreenSobreActivity::class.java))
         }

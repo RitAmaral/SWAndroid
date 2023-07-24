@@ -36,4 +36,7 @@
     <string name="curso_nao_editado">Curso não editado</string>
     <string name="seleciona_a_imagem_do_curso">Seleciona a imagem do curso</string>
     <string name="remover_imagem">Remover Imagem</string>
+    <string name="ordem_crescente">Ordem Crescente</string>
+    <string name="ordem_decrescente">Ordem Decrescente</string>
+    <string name="app_criada_por_ana_rita_amaral">App criada por: \nAna Rita Amaral</string>
 </resources>

@@ -49,6 +49,7 @@ class LoginActivity : AppCompatActivity() {
                 binding.editPassword.setText("")
                 }
             }
+
         //carregar no icon para mostrar e esconder password
         binding.imageMostrar.setOnClickListener {
             PasswordVisivel()
@@ -59,6 +60,7 @@ class LoginActivity : AppCompatActivity() {
     private fun CarregarUtilizadores(db: DBHelper) {
         listaUtilizadores = db.selectAllUtilizadorLista()
     }
+    //carregar no icon para ver e esconder password
     private fun PasswordVisivel() {
         passwordVisivel = !passwordVisivel
         val transformationMethod =

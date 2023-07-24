@@ -44,5 +44,16 @@ class FullscreenSobreActivity : AppCompatActivity() {
         //Audio player
         val mediaPlayer = MediaPlayer.create(this, R.raw.party)
         mediaPlayer.start()
+
+        //Autoavaliação
+        binding.textAutoavaliacao.text =
+            "Concluídos todos os pontos (1 a 10) pedidos no trabalho, fui acrescentar as seguintes funcionalidades:" +
+                " \n - Splashcreen " +
+                " \n - Todos os Layouts falados nas aulas (linear, relative, constraint e frame" +
+                " \n - Fullscreen (com ecrã sempre ligado) " +
+                " \n - Icon da App " +
+                " \n - Áudio no fullscreen " +
+                " \n - Ver e esconder Password" +
+                " \n Como não coloquei a data como string, e daí não ter ordenado os cursos por data, apenas por nome, penso que mereço como nota final: 19,9."
     }
 }

@@ -33,4 +33,7 @@
     <string name="curso_nao_editado">Course not edited</string>
     <string name="seleciona_a_imagem_do_curso">Select the course image</string>
     <string name="remover_imagem">Remove Image</string>
+    <string name="ordem_crescente">Ascending Order</string>
+    <string name="ordem_decrescente">Descending Order</string>
+    <string name="app_criada_por_ana_rita_amaral">App created by: Ana Rita Amaral</string>
 </resources>

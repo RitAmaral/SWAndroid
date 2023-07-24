@@ -32,7 +32,28 @@
             android:layout_height="wrap_content"
             android:text="@string/adicionar"
             android:textSize="16sp"
+            android:layout_marginHorizontal="15dp"
             android:backgroundTint="#009DE2" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp">
+
+            <RadioButton
+                android:id="@+id/radio_crescente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ordem_crescente" />
+
+            <RadioButton
+                android:id="@+id/radio_decrescente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ordem_decrescente" />
+
+        </RadioGroup>
 
     </LinearLayout>
 
