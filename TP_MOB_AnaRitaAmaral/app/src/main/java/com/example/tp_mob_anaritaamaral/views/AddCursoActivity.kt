@@ -17,7 +17,7 @@ class AddCursoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddCursoBinding
     private lateinit var launcher: ActivityResultLauncher<Intent>
-    private var id: Int? = -1
+    private var imagemId: Int? = -1
 
     @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +26,7 @@ class AddCursoActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val db = DBHelper(this)
+        val i = intent
 
         //ler os valores e registar curso
         binding.buttonAdicionar.setOnClickListener {
@@ -36,7 +37,7 @@ class AddCursoActivity : AppCompatActivity() {
             val preco = binding.editPreco.text.toString().toInt()
             val duracao = binding.editDuracao.text.toString().toInt()
             val edicao = binding.editEdicao.text.toString()
-            val imagemID = -1
+            val imagemID = imagemId
 
             //val formatoData = SimpleDateFormat("dd-MM-yyyy")
             //val dataInicial: Date? = formatoData.parse(inicio)
@@ -76,12 +77,15 @@ class AddCursoActivity : AppCompatActivity() {
         binding.imagem.setOnClickListener {
             launcher.launch(Intent(applicationContext, ImagemSelecionarActivity::class.java))
         }
+
         launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.data != null && it.resultCode == 1) {
-                id = it.data?.extras?.getInt("id")
-                binding.imagem.setImageDrawable(resources.getDrawable(id!!))
+                imagemId = it.data?.getIntExtra("id", 0)!!
+                if (imagemId!! > 0) {
+                    binding.imagem.setImageResource(imagemId!!)
+                }
             } else {
-                id = -1
+                imagemId = -1
                 binding.imagem.setImageResource(R.drawable.iconcesae)
             }
         }

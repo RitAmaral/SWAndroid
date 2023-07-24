@@ -16,16 +16,6 @@
         android:id="@+id/imagem_cesae"
         android:layout_marginVertical="10dp"
         android:src="@drawable/iconcesae"/>
-    <!--
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/text_id"
-        android:layout_marginVertical="5dp"
-        android:gravity="center"
-        android:hint="ID"
-        android:textSize="20sp"
-        android:textStyle="bold" /> -->
 
     <EditText
         android:layout_width="match_parent"
@@ -115,8 +105,4 @@
             android:text="@string/eliminar" />
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/recycler_view"/>
 </LinearLayout>

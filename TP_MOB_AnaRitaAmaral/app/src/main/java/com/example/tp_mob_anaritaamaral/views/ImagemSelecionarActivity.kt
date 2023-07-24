@@ -28,8 +28,8 @@ class ImagemSelecionarActivity : AppCompatActivity() {
         binding.btnRemoverImagem.setOnClickListener { sendID(R.drawable.iconcesae) }
     }
 
-    private fun sendID(id: Int) {
-        i.putExtra("id", id)
+    private fun sendID(imagemId: Int) {
+        i.putExtra("id", imagemId)
         setResult(1, i)
         finish()
     }

@@ -17,7 +17,7 @@ class InfoCursoActivity : AppCompatActivity() {
     private lateinit var db: DBHelper
     private lateinit var curso: Curso
     private lateinit var launcher: ActivityResultLauncher<Intent>
-    private var imageid: Int? = -1
+    private var imagemId: Int? = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +50,7 @@ class InfoCursoActivity : AppCompatActivity() {
                 preco = binding.editPreco.text.toString().toInt(),
                 duracao = binding.editDuracao.text.toString().toInt(),
                 edicao = binding.editEdicao.text.toString(),
-                imagemID = curso.imagemID
+                imagemID = imagemId!!
             )
 
             if (res > 0) {
@@ -91,10 +91,14 @@ class InfoCursoActivity : AppCompatActivity() {
 
         launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.data != null && it.resultCode == 1) {
-                imageid = it.data?.extras?.getInt("id")
-                binding.imagemCesae.setImageDrawable(resources.getDrawable(imageid!!))
+                //imagemId = it.data?.extras?.getInt("id")
+                imagemId = it.data?.getIntExtra("id", 0)!!
+                if (imagemId!! > 0) {
+                    binding.imagemCesae.setImageResource(imagemId!!)
+                }
+                //binding.imagemCesae.setImageDrawable(resources.getDrawable(imageId!!))
             } else {
-                imageid = -1
+                imagemId = -1
                 binding.imagemCesae.setImageResource(R.drawable.iconcesae)
             }
         }
