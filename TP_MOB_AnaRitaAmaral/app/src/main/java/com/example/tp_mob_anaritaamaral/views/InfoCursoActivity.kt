@@ -32,7 +32,6 @@ class InfoCursoActivity : AppCompatActivity() {
         //curso = db.selectCursoByIDObjeto(i.getIntExtra("id", 0))
         //curso = id?.let { db.selectCursoByIDObjeto(it) }!!
 
-
         if (id != null) {
             curso = db.selectCursoByIDObjeto(id)
             buscar()
@@ -40,6 +39,7 @@ class InfoCursoActivity : AppCompatActivity() {
             finish()
         }
 
+        //editar curso
         binding.botaoEditar.setOnClickListener {
             val res = db.updateCurso(
                 id = curso.id,
@@ -63,8 +63,9 @@ class InfoCursoActivity : AppCompatActivity() {
                 setResult(0, i)
                 finish()
             }
-
         }
+
+        //eliminar curso
         binding.botaoEliminar.setOnClickListener {
             val res = db.deleteCurso(curso.id)
             if (res > 0) {
@@ -85,6 +86,8 @@ class InfoCursoActivity : AppCompatActivity() {
                 finish()
             }
         }
+
+        //ir para escolher imagem
         binding.imagemCesae.setOnClickListener {
             launcher.launch(Intent(applicationContext, ImagemSelecionarActivity::class.java))
         }
@@ -101,6 +104,11 @@ class InfoCursoActivity : AppCompatActivity() {
                 imagemId = -1
                 binding.imagemCesae.setImageResource(R.drawable.iconcesae)
             }
+        }
+
+        //cancelar
+        binding.botaoCancelar.setOnClickListener {
+            finish()
         }
 
     }

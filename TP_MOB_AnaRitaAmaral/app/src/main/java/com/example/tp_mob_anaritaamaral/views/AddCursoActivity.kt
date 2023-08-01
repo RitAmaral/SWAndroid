@@ -89,5 +89,10 @@ class AddCursoActivity : AppCompatActivity() {
                 binding.imagem.setImageResource(R.drawable.iconcesae)
             }
         }
+
+        //cancelar
+        binding.buttonCancelar.setOnClickListener {
+            finish()
+        }
     }
 }

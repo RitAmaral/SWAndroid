@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/adicionar_curso"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:textColor="@color/rosa"
         android:textStyle="bold"
         android:fontFamily="casual" />
@@ -30,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_marginStart="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -51,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_marginStart="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_marginStart="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -82,7 +88,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="150dp"
+            android:minWidth="133dp"
             android:gravity="center"
             android:id="@+id/edit_inicio"
             android:inputType="text"
@@ -98,7 +104,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="150dp"
+            android:minWidth="133dp"
             android:gravity="center"
             android:inputType="text"
             android:id="@+id/edit_fim"
@@ -111,7 +117,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_marginStart="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -153,7 +159,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edicao"
-            android:layout_marginStart="10dp"
+
             android:textSize="20sp" />
         <EditText
             android:layout_width="wrap_content"
@@ -165,14 +171,29 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_adicionar"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/adicionar_curso"
-        android:textSize="20sp"
+        android:orientation="horizontal"
         android:layout_marginVertical="20dp"
-        android:backgroundTint="#009DE2" />
+        android:gravity="center">
+        <Button
+            android:id="@+id/button_adicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/adicionar_curso"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#009DE2" />
+        <Button
+            android:id="@+id/button_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelar"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#5E1F6A" />
+    </LinearLayout>
 
 
     <RelativeLayout
@@ -188,3 +209,4 @@
     </RelativeLayout>
 
 </LinearLayout>
+</ScrollView>

@@ -154,18 +154,26 @@
             android:id="@+id/botao_editar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="16sp"
-            android:backgroundTint="#AB73AF"
+            android:layout_marginHorizontal="3dp"
+            android:textSize="20sp"
+            android:backgroundTint="@color/azul_claro"
             android:text="@string/editar" />
         <Button
             android:id="@+id/botao_eliminar"
             android:layout_width="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="3dp"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:backgroundTint="#5E1F6A"
+            android:textSize="20sp"
+            android:backgroundTint="#AB73AF"
             android:text="@string/eliminar" />
+        <Button
+            android:id="@+id/botao_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="3dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:backgroundTint="#5E1F6A"
+            android:text="@string/cancelar" />
     </LinearLayout>
 
 </LinearLayout>

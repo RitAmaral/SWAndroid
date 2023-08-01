@@ -36,4 +36,6 @@
     <string name="ordem_crescente">Ascending Order</string>
     <string name="ordem_decrescente">Descending Order</string>
     <string name="app_criada_por_ana_rita_amaral">App created by: Ana Rita Amaral</string>
+    <string name="cancelar">Cancel</string>
+    <string name="voltar">Go Back</string>
 </resources>

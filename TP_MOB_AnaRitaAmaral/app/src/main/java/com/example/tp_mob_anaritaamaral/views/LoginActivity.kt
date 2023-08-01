@@ -28,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
         listaUtilizadores = ArrayList()
         CarregarUtilizadores(db)
 
+        //user faz login
         binding.buttonLogin.setOnClickListener {
             val username1 = binding.editUsername.text.toString().trim() //pede username ao utilizador
             val password1 = binding.editPassword.text.toString().trim()
@@ -53,6 +54,11 @@ class LoginActivity : AppCompatActivity() {
         //carregar no icon para mostrar e esconder password
         binding.imageMostrar.setOnClickListener {
             PasswordVisivel()
+        }
+
+        //cancelar login
+        binding.buttonCancelar.setOnClickListener {
+            finish()
         }
 
     }

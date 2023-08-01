@@ -9,22 +9,13 @@
     android:orientation="vertical"
     tools:context=".splashsc.SplashScreen">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:fontFamily="casual"
-        android:text="CESAE Digital"
-        android:textColor="@color/rosa"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:layout_marginBottom="100dp"
         app:srcCompat="@drawable/logo" />
 
 </LinearLayout>

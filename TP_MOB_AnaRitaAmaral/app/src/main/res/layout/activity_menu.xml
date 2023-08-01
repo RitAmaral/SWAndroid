@@ -38,6 +38,7 @@
             android:layout_marginVertical="20dp"
             android:backgroundTint="#5E1F6A"
             android:textSize="20sp"
+            android:padding="10dp"
             android:layout_marginHorizontal="10dp"
             android:layout_height="wrap_content"
             android:text="@string/cursos" />
@@ -47,6 +48,7 @@
             android:layout_marginVertical="20dp"
             android:backgroundTint="#009DE2"
             android:textSize="20sp"
+            android:padding="10dp"
             android:layout_marginHorizontal="10dp"
             android:layout_height="wrap_content"
             android:text="@string/sobre" />

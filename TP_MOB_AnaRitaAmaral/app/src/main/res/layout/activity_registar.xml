@@ -15,7 +15,7 @@
         android:text="@string/registar"
         android:textSize="40sp"
         android:layout_marginVertical="20dp"
-        android:textColor="@color/rosa"
+        android:textColor="@color/light_blue_600"
         android:textStyle="bold"
         android:fontFamily="casual" />
 
@@ -83,15 +83,33 @@
             android:minWidth="200dp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_registo"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:backgroundTint="#5E1F6A"
-        android:padding="15dp"
-        android:text="@string/registar"
-        android:textSize="24sp" />
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_registo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:backgroundTint="@color/light_blue_600"
+            android:layout_marginHorizontal="10dp"
+            android:padding="15dp"
+            android:text="@string/registar"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/button_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#5E1F6A"
+            android:padding="15dp"
+            android:text="@string/cancelar"
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"

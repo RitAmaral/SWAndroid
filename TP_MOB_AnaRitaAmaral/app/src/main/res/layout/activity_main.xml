@@ -53,9 +53,9 @@
             android:layout_marginTop="305dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="218dp"
-            android:backgroundTint="#5E1F6A"
+            android:backgroundTint="@color/light_blue_600"
             android:text="@string/registar"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/button_Login"
@@ -64,9 +64,9 @@
             android:layout_marginTop="305dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="218dp"
-            android:backgroundTint="#009DE2"
+            android:backgroundTint="@color/rosa"
             android:text="@string/entrar"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
 
     </LinearLayout>

@@ -42,6 +42,7 @@ class CursosActivity : AppCompatActivity() {
         })
         binding.reyclerViewCursos.adapter = adapter
 
+        //adicionar curso:
         binding.buttonAdd.setOnClickListener {
             val i = Intent(this, AddCursoActivity::class.java)
             launcher.launch(i)
@@ -64,6 +65,11 @@ class CursosActivity : AppCompatActivity() {
         ordernarLista.setOnCheckedChangeListener { _, checkedId ->
             ordemCrescente = checkedId == R.id.radio_crescente
             updateCursosList()
+        }
+
+        //voltar para trás
+        binding.buttonVoltar.setOnClickListener {
+            finish()
         }
 
     }

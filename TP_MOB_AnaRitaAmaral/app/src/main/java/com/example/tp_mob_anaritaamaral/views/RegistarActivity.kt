@@ -24,8 +24,7 @@ class RegistarActivity : AppCompatActivity() {
         val db = DBHelper(this)
         listaUtilizadores = ArrayList() //inicializo a lista de utilizadores
 
-        //binding.recyclerView.layoutManager = LinearLayoutManager(this) //não preciso mostrar esta layout
-
+        //registar user
         binding.buttonRegisto.setOnClickListener {
             val username = binding.editUser.text.toString().trim() //pede user ao utilizador
             val password = binding.editPass.text.toString().trim()
@@ -46,6 +45,11 @@ class RegistarActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, getString(R.string.o_campo_de_username_nao_pode_estar_vazio), Toast.LENGTH_SHORT).show()
             }
+        }
+
+        //cancelar registo
+        binding.buttonCancelar.setOnClickListener {
+            finish()
         }
     }
 
