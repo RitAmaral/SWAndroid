@@ -1,6 +1,7 @@
 package com.example.tp_mob_anaritaamaral.views
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.tp_mob_anaritaamaral.databinding.ActivityMenuBinding
@@ -23,6 +24,13 @@ class MenuActivity : AppCompatActivity() {
         //Ir para Sobre activity
         binding.buttonSobre.setOnClickListener {
             startActivity(Intent(this, FullscreenSobreActivity::class.java))
+        }
+
+        //clica aqui para saber mais
+        binding.textClica.setOnClickListener {
+            val url = "https://www.cesaedigital.pt/categoria-curso/formacao2020/promov/"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
         }
 
     }

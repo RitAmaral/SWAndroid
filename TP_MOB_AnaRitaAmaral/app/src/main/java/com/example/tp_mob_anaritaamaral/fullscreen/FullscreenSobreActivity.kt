@@ -56,5 +56,10 @@ class FullscreenSobreActivity : AppCompatActivity() {
                 " \n - Scroll view" +
                 " \n - Ver e esconder Password" + "\n" +
                 " \n Como não coloquei a data como string, e daí não ter ordenado os cursos por data, apenas por nome, penso que mereço como nota final: 19,9."
+
+        //voltar
+        binding.buttonVoltar.setOnClickListener {
+            finish()
+        }
     }
 }

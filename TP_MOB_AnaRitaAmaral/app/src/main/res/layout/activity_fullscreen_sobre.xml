@@ -49,4 +49,14 @@
         android:textColor="@color/white"
         android:text="@string/ligue_o_som" />
 
+    <Button
+        android:id="@+id/button_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#5E1F6A"
+        android:text="@string/voltar" />
+
 </FrameLayout>
